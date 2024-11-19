@@ -39,7 +39,8 @@
                         rel="noopener noreferrer"><img
                             src="https://info.credly.com/hs-fs/hubfs/Credly_Logo_Orange_10-Inch.png?width=3000&amp;name=Credly_Logo_Orange_10-Inch.png"
                             class="w-auto h-[25px]"></a>
-                    <a class="text-lg" href="https://drive.google.com/file/d/1sXzWSib5oYmb8QLQCY8-TGTXYO8doXGl/view?usp=sharing"
+                    <a class="text-lg"
+                        href="https://drive.google.com/file/d/1sXzWSib5oYmb8QLQCY8-TGTXYO8doXGl/view?usp=sharing"
                         target="_blank" rel="noopener noreferrer">Resume <i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
@@ -70,396 +71,84 @@
                 </a>
             </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-[100px] md:gap-8">
-            <!-- Projects Section -->
-            <div>
-                <h2 class="text-3xl font-bold text-left mb-6">Projects</h2>
-                <div class="grid gap-4">
-                    <UCard v-for="project in projects" :key="project.title"
-                        class="group relative cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-500/20">
-                        <template #header>
-                            <div class="flex justify-between items-center">
-                                <h3 class="text-xl font-semibold">{{ project.title }} <span
-                                        class="text-primary-500 text-7xl">.</span> {{ project.date }}</h3>
-                                <i
-                                    class="fas fa-expand text-primary-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
-                            </div>
-                        </template>
-                        <p class="text-sm text-gray-400">{{ project.shortDescription }}</p>
-
-                        <!-- Hover Overlay -->
-                        <div role="button" aria-label="View Details"
-                            @click="hasModal ? openModal(project) : window.open(project.link, '_blank')"
-                            class="absolute inset-0 bg-primary-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
-                            <span v-if="project.hasModal"
-                                class="bg-black/80 text-white text-sm px-3 py-1 rounded-full flex items-center gap-2">
-                                <i class="fas fa-search text-xs"></i>
-                                View Details
-                            </span>
-                            <a v-else :href="project.link" target="_blank"
-                                class="bg-black/80 text-white text-sm px-3 py-1 rounded-full flex items-center gap-2">
-                                <i class="fas fa-external-link-alt text-xs"></i>
-                                View Live
-                            </a>
+        <div class="flex justify-center items-center my-[100px]">
+            <blockquote class="text-xl italic font-semibold text-gray-900 dark:text-white">
+                <svg class="w-8 h-8 text-gray-400 dark:text-gray-600 mb-4" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+                    <path
+                        d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
+                </svg>
+                <p>"A ship in harbor is safe, but that is not what ships are built for."</p>
+            </blockquote>
+        </div>
+        <div class="flex flex-col justify-center items-center my-[100px]">
+            <h2 class="text-3xl font-bold text-center mb-8">Top Blogs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+                <!-- Loading State -->
+                <template v-if="pending">
+                    <UCard v-for="n in 3" :key="n" class="animate-pulse">
+                        <div class="h-48 bg-gray-700/20 rounded-t-lg"></div>
+                        <div class="p-4 space-y-3">
+                            <div class="h-4 bg-gray-700/20 rounded w-3/4"></div>
+                            <div class="h-3 bg-gray-700/20 rounded w-full"></div>
+                            <div class="h-3 bg-gray-700/20 rounded w-2/3"></div>
                         </div>
                     </UCard>
-                </div>
-            </div>
+                </template>
 
-            <!-- Tools Section -->
-            <div>
-                <h2 class="text-3xl font-bold text-left mb-6">Tools I have built</h2>
-                <div class="grid gap-4">
-                    <UCard v-for="tool in tools" :key="tool.title"
-                        class="group relative cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-500/20">
+                <!-- Blogs -->
+                <template v-else>
+                    <UCard v-for="blog in blogs.slice(0, 3)" :key="blog.id" 
+                        class="group cursor-pointer hover:-translate-y-1 transition-all duration-300"
+                        @click="window.open(blog.url, '_blank')"
+                    >
                         <template #header>
-                            <div class="flex justify-between items-center">
-                                <h3 class="text-xl font-semibold">{{ tool.title }} <span
-                                        class="text-primary-500 text-7xl">.</span> {{ tool.date }}</h3>
-                                <i
-                                    class="fas fa-expand text-primary-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
-                            </div>
+                            <img v-if="blog.cover_image" :src="blog.cover_image" :alt="blog.title" 
+                                class="w-full h-48 object-cover rounded-t-lg" />
                         </template>
-                        <p class="text-sm text-gray-400">{{ tool.shortDescription }}</p>
-
-                        <!-- Hover Overlay -->
-                        <div role="button" aria-label="View Details"
-                            @click="tool.hasModal ? openModal(tool) : window.open(tool.link, '_blank')"
-                            class="absolute inset-0 bg-primary-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
-                            <span v-if="tool.hasModal"
-                                class="bg-black/80 text-white text-sm px-3 py-1 rounded-full flex items-center gap-2">
-                                <i class="fas fa-search text-xs"></i>
-                                View Details
-                            </span>
-                            <a v-else :href="tool.link" target="_blank"
-                                class="bg-black/80 text-white text-sm px-3 py-1 rounded-full flex items-center gap-2">
-                                <i class="fas fa-external-link-alt text-xs"></i>
-                                View Live
-                            </a>
+                        
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2 group-hover:text-primary-500">{{ blog.title }}</h3>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">{{ blog.description }}</p>
+                            <div class="flex justify-between items-center text-sm">
+                                <span>{{ blog.readable_publish_date }}</span>
+                                <span>{{ blog.reading_time_minutes }} min read</span>
+                            </div>
                         </div>
                     </UCard>
-                </div>
+                </template>
             </div>
-
-            <!-- Modal -->
-            <UModal v-model="isModalOpen" :ui="{ width: 'max-w-3xl' }">
-                <UCard v-if="selectedItem">
-                    <template #header>
-                        <div class="flex justify-between items-center">
-                            <h3 class="text-xl font-bold">{{ selectedItem.title }}</h3>
-                            <UButton icon="i-lucide-external-link" variant="ghost" :to="selectedItem.link"
-                                target="_blank" v-if="selectedItem.link" />
-                        </div>
-                    </template>
-
-                    <div class="space-y-12">
-                        <!-- Project/Tool Image -->
-                        <img v-if="selectedItem.image" :src="selectedItem.image" :alt="selectedItem.title"
-                            class="w-full rounded-lg" />
-                        <!-- Description -->
-                        <div>
-                            <h4 class="font-semibold mb-2">Description</h4>
-                            <p class="desc-p" v-html="selectedItem.description"></p>
-                        </div>
-
-                        <!-- Tech Stack -->
-                        <div v-if="selectedItem.techStack">
-                            <h4 class="font-semibold mb-2">Tech Stack</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <UBadge v-for="tech in selectedItem.techStack" :key="tech" color="primary">
-                                    {{ tech }}
-                                </UBadge>
-                            </div>
-                        </div>
-
-                        <!-- Challenges -->
-                        <!--<div v-if="selectedItem.challenges" class="max-h-[30vh]">
-                            <h4 class="font-semibold mb-2">Challenges & Solutions</h4>
-                            <ul class="list-disc list-inside space-y-2">
-                                <li v-for="challenge in selectedItem.challenges" :key="challenge">
-                                    {{ challenge }}
-                                </li>
-                            </ul>
-                        </div>-->
-                        <div class="flex justify-end">
-                            <a v-if="selectedItem.link" :href="selectedItem.link" target="_blank" class="w-full">
-                                View more details <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                </UCard>
-            </UModal>
         </div>
     </main>
 </template>
 
 <script setup>
-import kvoltslab from '~/assets/images/brands/kvoltslab.png'
-import outliant from '~/assets/images/brands/outliant.jpg'
-import blend360 from '~/assets/images/brands/blend360_logo.jpg'
-import evoludata from '~/assets/images/brands/evoludata.png'
-import myidealdental from '~/assets/images/brands/myidealdental.png'
-import greenrack from '~/assets/images/brands/green_rack_solar_contracting_logo.jpg'
-import premierpharma from '~/assets/images/brands/premier_pharma.svg'
-import apollo from '~/assets/images/brands/appollo.webp'
-import ctlco from '~/assets/images/brands/ctlcosarl.png'
-import groupsupra from '~/assets/images/brands/group_supra.png'
+import { useBrands } from '~/composables/useBrands'
+import { useProjectsAndTools } from '~/composables/useProjectsAndTools'
 
-import tiki_iot from '~/assets/images/projects/tiki_iot.png'
-import vantoria from '~/assets/images/projects/vantoria_device.jpg'
-import atalaku from '~/assets/images/projects/atalaku.jpg'
-import school_management from '~/assets/images/projects/school_management.png'
-import healthlink from '~/assets/images/projects/hl.png'
-import faktshare from '~/assets/images/projects/fakt.png'
+const { brands } = useBrands()
+const { tools, projects } = useProjectsAndTools()
 
 const { setSeo } = useSeo()
 setSeo({
     title: 'Home | Ansima - Full Stack Developer',
 })
 
-const brands = [
-    {
-        name: 'Kilo Volts Lab',
-        url: 'https://kvolts-lab.com',
-        image: kvoltslab,
-        whiteBg: false
-    },
-    {
-        name: 'Outliant',
-        url: 'https://outliant.com',
-        image: outliant,
-        whiteBg: false
-    },
-    {
-        name: 'Blend360',
-        url: 'https://blend360.com',
-        image: blend360,
-        whiteBg: false
-    },
-    {
-        name: 'Evoludata',
-        url: 'https://evoludata.com',
-        image: evoludata,
-        whiteBg: false
-    },
-    {
-        name: 'My Ideal Dental',
-        url: 'https://myidealdental.com',
-        image: myidealdental,
-        whiteBg: false
-    },
-    {
-        name: 'Green Rack Solar Contracting',
-        url: 'https://greenracksolar.com/',
-        image: greenrack,
-        whiteBg: false
-    },
-    {
-        name: 'Premier Pharma',
-        url: 'https://www.premierpharma.com/',
-        image: premierpharma,
-        whiteBg: true
-    },
-    {
-        name: 'Apollo Theater',
-        url: 'https://www.apollotheater.org/',
-        image: apollo,
-        whiteBg: true
-    },
-    {
-        name: 'Ctlco',
-        url: 'https://web.archive.org/web/20240104161504/https://ctlcosarl.com/',
-        image: ctlco,
-        whiteBg: true
-    },
-    {
-        name: "Group Supra",
-        url: "https://groupesupra.com",
-        image: groupsupra,
-        whiteBg: false
+let blogs = ref([]);
+const pending = ref(true)
+
+onMounted(async () => {
+    try {
+        const response = await fetch('https://dev.to/api/articles?username=elvisans')
+        const articles = await response.json()
+        // Sort by popularity (reactions count)
+        blogs.value = articles.sort((a, b) => b.public_reactions_count - a.public_reactions_count)
+    } catch (error) {
+        console.error('Error fetching blogs:', error)
+    } finally {
+        pending.value = false
     }
-]
-
-const isModalOpen = ref(false)
-const selectedItem = ref(null)
-
-const tools = [
-    {
-        title: 'AI Chatbot',
-        shortDescription: 'Train your personal assistant and build a chatbot to talk for you',
-        description: 'A customizable chatbot platform with embeddable widget support. Users can train their chatbots, deploy multiple instances, and integrate them via JavaScript. Features include customizable welcome messages, embedded answers, and prompt configuration.',
-        link: 'https://github.com/ElvisAns/ai-chatbot-demo',
-        techStack: ['Nuxt.js', 'Cloudflare AI'],
-        challenges: [
-            'Implementing real-time communication',
-            'Optimizing AI response times',
-            'Creating a secure embedding system',
-            'Building a scalable subscription model'
-        ],
-        date: '2024',
-        inProgress: true,
-        hasModal: false
-    },
-    {
-        title: 'Image Magnet',
-        shortDescription: 'Extract images from websites efficiently',
-        description: 'A web crawler that efficiently extracts images from websites, with features for filtering, organizing, and bulk downloading.',
-        link: 'https://image-magnet.com',
-        techStack: ['Node.js', 'Web Scraping', 'Image Processing'],
-        challenges: [
-            'Implementing efficient web crawling',
-            'Handling different image formats',
-            'Managing concurrent downloads'
-        ],
-        date: '2023',
-        inProgress: false,
-        hasModal: false
-    },
-    {
-        title: 'Vue Predictive Search',
-        shortDescription: 'Smart search component for Vue applications',
-        description: 'A Vue.js component that provides predictive search functionality with customizable suggestions and keyboard navigation.',
-        link: 'https://www.npmjs.com/package/vue-predictive-search',
-        techStack: ['Vue.js', 'Github Actions'],
-        challenges: [
-            'Optimizing search performance',
-            'Implementing keyboard navigation',
-            'Creating a flexible API'
-        ],
-        date: '2024',
-        inProgress: false,
-        hasModal: false
-    },
-    {
-        title: 'Fakt Share',
-        shortDescription: 'Fakt share is a social learning platform',
-        description: 'FaktShare is a social learning platform that combines the fun of sharing facts with the convenience of a social media interface. Users can discover, share and interact with snippets of knowledge across multiple categories, making learning engaging and accessible. Learn more about it <a href="https://ai.google.dev/competition/projects/fakt-share" target="_blank">https://ai.google.dev/competition/projects/fakt-share</a>',
-        link: 'https://fakt-share.vercel.app/',
-        techStack: ['Nuxt.js', 'Vercel', 'Gemini API', "Firebase"],
-        challenges: [
-            'Building a social learning platform',
-            'Integrating AI models',
-            'Building a scalable system'
-        ],
-        date: '2024',
-        inProgress: false,
-        hasModal: true,
-        image: faktshare
-    },
-    {
-        title: 'Voice Powered Expense Tracker',
-        shortDescription: 'Track expenses using voice commands',
-        description: 'An innovative expense tracking application that uses voice recognition to log and categorize expenses.',
-        link: 'https://github.com/ElvisAns/voice-powered-expense-tracker',
-        techStack: ['Nuxt.js', 'Firebase'],
-        challenges: [
-            'Accurate voice recognition',
-            'Natural language processing',
-            'Real-time processing'
-        ],
-        date: '2023',
-        inProgress: false,
-        hasModal: true
-    },
-]
-
-const projects = [
-    {
-        title: 'Tiki IoT',
-        shortDescription: 'Build IoT realtime dashboard without writing code',
-        description: 'IoT platform powered by Tiki Trackers, enabling real-time dashboard creation and automation without coding. Features include real-time monitoring, automated actions, and visual flow builder. Use cases : <a href="https://dev.tiki.org/Internet-of-Things" target="_blank">https://dev.tiki.org/Internet-of-Things</a>',
-        link: 'https://gitlab.com/tikiwiki/tiki/-/merge_requests/4178',
-        techStack: ['PHP', "JavaScript"],
-        challenges: [
-            'Real-time data synchronization',
-            'User-friendly interface for non-technical users',
-            'Scalable automation system'
-        ],
-        date: '2024',
-        inProgress: true,
-        image: tiki_iot,
-        hasModal: true
-    },
-    {
-        title: 'School Management System',
-        shortDescription: 'Complete school management solution',
-        description: 'Comprehensive system for managing student finance and attendance at schools, including payment tracking and attendance monitoring.',
-        link: 'https://schoolmanagement.hcesinvestment.com/',
-        techStack: ['PHP', 'MySQL', 'JavaScript', 'Bootstrap'],
-        challenges: [
-            'Complex financial calculations',
-            'Real-time attendance tracking',
-            'Multi-user access control'
-        ],
-        date: '2021',
-        inProgress: false,
-        hasModal: true,
-        image: school_management
-    },
-    {
-        title: 'Atalaku Xpress',
-        shortDescription: 'Electronic payment system for public transport',
-        description: 'Security and revenue maximization solution for public transport with electronic card payment system, supporting multiple payment methods including mobile money.',
-        link: 'https://web.archive.org/web/20240104161722/https://ctlcosarl.com/blog/lire/La_techonologie_de_chez_nous,_lancement_officiel_des_produits_HI-Tech_de_la_CTLCo_sarl',
-        techStack: ['PHP/CodeIgniter', 'API Integration', 'Embedded Systems'],
-        challenges: [
-            'Secure payment processing',
-            'API integration',
-            "Embedded system setup and integration"
-        ],
-        date: '2022',
-        inProgress: false,
-        hasModal: true,
-        image: atalaku
-    },
-    {
-        title: 'Vantoria Attendance',
-        shortDescription: 'Smart attendance tracking system',
-        description: 'Attendance system consisting of validator and a cloud server to allow attendance tracking and reporting in primary offices',
-        link: 'https://web.archive.org/web/20240104161722/https://ctlcosarl.com/blog/lire/La_techonologie_de_chez_nous,_lancement_officiel_des_produits_HI-Tech_de_la_CTLCo_sarl',
-        techStack: ['Arduino', 'PHP/CodeIgniter', 'SMS Integration'],
-        challenges: [
-            'Fingerprint reader integration',
-            'System with no allowed downtime',
-            'Automated reporting system'
-        ],
-        date: '2021',
-        inProgress: false,
-        hasModal: true,
-        image: vantoria
-    },
-    {
-        title: 'HealthLink',
-        shortDescription: 'QR code health bracelets',
-        description: 'Quick access to patient information using QR code bracelets',
-        link: 'https://gethealth-link.com',
-        techStack: ['PHP/Laravel', 'Inertia.js', 'Vuejs'],
-        date: '2023 - Present',
-        inProgress: false,
-        hasModal: true,
-        image: healthlink
-    },
-    {
-        title: 'Webflow Local Bridge',
-        shortDescription: 'Development tool for Webflow',
-        description: 'Coding tool designed specifically for Webflow developers to enhance development workflow.',
-        link: 'https://webflow-local-bridge-website.vercel.app/',
-        techStack: ['Webflow API', 'Development Tools', 'Web Technologies'],
-        challenges: [
-            'API integration',
-            'Local development environment',
-            'Synchronization with Webflow'
-        ],
-        date: '2024',
-        inProgress: false,
-        hasModal: true
-    }
-]
-
-const openModal = (item) => {
-    selectedItem.value = item
-    isModalOpen.value = true
-}
+})
 </script>
 
 <style>
