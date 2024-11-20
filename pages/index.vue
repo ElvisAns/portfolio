@@ -101,23 +101,38 @@
 
                 <!-- Blogs -->
                 <template v-else>
-                    <UCard v-for="blog in blogs.slice(0, 3)" :key="blog.id"
-                        class="group cursor-pointer hover:-translate-y-1 transition-all duration-300"
-                        @click="window.open(blog.url, '_blank')">
-                        <template #header>
-                            <img v-if="blog.cover_image" :src="blog.cover_image" :alt="blog.title"
-                                class="w-full h-48 object-cover rounded-t-lg" />
-                        </template>
+                    <NuxtLink 
+                        v-for="blog in blogs.slice(0, 3)" 
+                        :key="blog.id"
+                        :to="`/blog/${blog.slug}`"
+                        class="block"
+                    >
+                        <UCard 
+                            class="group hover:-translate-y-1 transition-all duration-300"
+                        >
+                            <template #header>
+                                <img 
+                                    v-if="blog.cover_image" 
+                                    :src="blog.cover_image" 
+                                    :alt="blog.title"
+                                    class="w-full h-48 object-cover rounded-t-lg" 
+                                />
+                            </template>
 
-                        <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-2 group-hover:text-primary-500">{{ blog.title }}</h3>
-                            <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">{{ blog.description }}</p>
-                            <div class="flex justify-between items-center text-sm">
-                                <span>{{ blog.readable_publish_date }}</span>
-                                <span>{{ blog.reading_time_minutes }} min read</span>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-lg mb-2 group-hover:text-primary-500">
+                                    {{ blog.title }}
+                                </h3>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">
+                                    {{ blog.description }}
+                                </p>
+                                <div class="flex justify-between items-center text-sm">
+                                    <span>{{ blog.readable_publish_date }}</span>
+                                    <span>{{ blog.reading_time_minutes }} min read</span>
+                                </div>
                             </div>
-                        </div>
-                    </UCard>
+                        </UCard>
+                    </NuxtLink>
                 </template>
             </div>
         </div>
