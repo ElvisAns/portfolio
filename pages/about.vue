@@ -1,5 +1,5 @@
 <template>
-    <main class="max-w-[1280px] mx-auto px-[20px] mt-[100px] text-black dark:text-white">
+    <main class="max-w-[1280px] mx-auto px-[20px] mt-[50px] text-black dark:text-white">
         <!-- Hero Section -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
             <div>
@@ -21,7 +21,7 @@
                     class="rounded-2xl shadow-xl w-full h-auto"
                 />
                 <!-- Decorative elements -->
-                <div class="absolute -right-6 bg-primary-500/10 w-full h-full rounded-2xl -z-10 bottom-6"></div>
+                <div class="absolute -right-4 bg-primary-500/20 w-[100%] h-full rounded-2xl -z-10 bottom-6"></div>
             </div>
         </div>
 
