@@ -19,6 +19,12 @@
                         {{ item.label }}
                     </NuxtLink>
                 </li>
+                <li>
+                    <UButton to="https://calendly.com/ansimapersic/30min" target="_blank" color="white" size="lg">
+                        <UIcon name="i-heroicons-calendar-days" class="w-4 h-4 mr-2" />
+                        Book a discovery call
+                    </UButton>
+                </li>
             </ul>
 
             <!-- Mobile Menu Button -->
@@ -70,6 +76,12 @@
                             <UIcon :name="item.icon" class="w-6 h-6" />
                             {{ item.label }}
                         </NuxtLink>
+                    </li>
+                    <li class="pt-12 pb-4">
+                        <UButton to="https://calendly.com/ansimapersic/30min" block target="_blank" color="white" size="lg">
+                            <UIcon name="i-heroicons-calendar-days" class="w-6 h-6 mr-2" />
+                            Book a discovery call
+                        </UButton>
                     </li>
                 </ul>
             </div>
