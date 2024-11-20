@@ -15,11 +15,7 @@
                 </UButton>
             </div>
             <div class="relative">
-                <img 
-                    src="~/assets/images/me.jpg" 
-                    alt="Elvis at work" 
-                    class="rounded-2xl shadow-xl w-full h-auto"
-                />
+                <img src="~/assets/images/me.jpg" alt="Elvis at work" class="rounded-2xl shadow-xl w-full h-auto" />
                 <!-- Decorative elements -->
                 <div class="absolute -right-4 bg-primary-500/20 w-[100%] h-full rounded-2xl -z-10 bottom-6"></div>
             </div>
@@ -28,18 +24,40 @@
         <!-- Introduction -->
         <div class="prose dark:prose-invert max-w-none mb-20">
             <p class="text-xl leading-relaxed mb-6">
-                Hi! I'm Ansima, a software engineer and entrepreneur. I've built my career at the 
-                intersection of web development and hardware, and I'm passionate about creating tech solutions 
+                Hi! I'm Ansima, a software engineer and entrepreneur. I've built my career at the
+                intersection of web development and hardware, and I'm passionate about creating tech solutions
                 that have real-world impact.
             </p>
             <p class="text-xl leading-relaxed mb-6">
-                Currently, I'm working with <a href="https://outliant.com" target="_blank" class="text-primary-500 hover:underline">Outliant</a>, an agency where we help businesses grow through marketing and web development.
-                and I am also a core contributor at 
-                <a href="https://openhub.net/accounts/ElvisAns" target="_blank" class="text-primary-500 hover:underline">
+                Currently, I'm working with <a href="https://outliant.com" target="_blank"
+                    class="text-primary-500 hover:underline">Outliant</a>, an agency where we help businesses grow
+                through marketing and web development.
+                and I am also a core contributor at
+                <a href="https://openhub.net/accounts/ElvisAns" target="_blank"
+                    class="text-primary-500 hover:underline">
                     TikiCMS groupware
-                </a>, 
+                </a>,
                 an opensource PHP based Content Managed System.
             </p>
+
+            <!-- Added Achievement Image -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="relative">
+                    <img src="~/assets/images/we_won_.jpg"
+                        alt="TVET Youth Challenge Victory - Health Tracking Device Project"
+                        class="rounded-2xl shadow-xl w-auto h-[200px]" />
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 italic pt-2">
+                        Winning the TVET Youth Challenge in 2019 with our health tracking device project
+                    </p>
+                </div>
+                <div class="relative">
+                    <img src="~/assets/images/demo_day.jpg" alt="Demo day for CTLCO sarl"
+                        class="rounded-2xl shadow-xl w-auto h-[200px]" />
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 italic pt-2">
+                        Me at demo day for CTLCO sarl, 2021
+                    </p>
+                </div>
+            </div>
         </div>
 
         <!-- Principles -->
@@ -74,13 +92,8 @@
         <div class="mb-20">
             <h2 class="text-3xl font-bold mb-8">My Journey</h2>
             <div class="space-y-8">
-                <TimelineItem 
-                    v-for="(item, index) in timeline" 
-                    :key="index"
-                    :year="item.year"
-                    :title="item.title"
-                    :description="item.description"
-                />
+                <TimelineItem v-for="(item, index) in timeline" :key="index" :year="item.year" :title="item.title"
+                    :description="item.description" />
             </div>
         </div>
 
@@ -167,4 +180,4 @@ useHead({
         { name: 'description', content: 'Software engineer and entrepreneur, specializing in web development and IoT solutions.' }
     ]
 })
-</script> 
+</script>
