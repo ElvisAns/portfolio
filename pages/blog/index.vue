@@ -1,5 +1,5 @@
 <template>
-    <main class="max-w-[1280px] mx-auto px-[20px] mt-[100px] text-black dark:text-white">
+    <main class="max-w-[1280px] mx-auto px-[20px] mt-[50px] text-black dark:text-white">
         <h1 class="dark:text-white text-primary-500 text-[3rem] md:text-[5rem] font-bold">Blog Posts</h1>
         <p class="dark:text-[#def858] text-primary-500 text-3xl mb-12">Thoughts, tutorials and insights about web development</p>
 

@@ -1,11 +1,11 @@
 <template>
-    <main class="max-w-[1280px] mx-auto px-[20px] mt-[100px] text-black dark:text-white">
-        <h1 class="dark:text-white text-primary-500 text-[3rem] md:text-[5rem] lg:text-[7rem] font-bold">Ansima Elvis
+    <main class="max-w-[1280px] mx-auto px-[20px] mt-[50px] text-black dark:text-white">
+        <h1 class="dark:text-white text-primary-500 text-[3rem] md:text-[5rem] lg:text-[6rem] font-bold">Ansima Elvis
         </h1>
-        <p class="dark:text-[#def858] text-primary-500 text-5xl">Full-Stack Developer & Entrepreneur</p>
+        <p class="dark:text-[#def858] text-primary-500 text-4xl">Full-Stack Developer & Entrepreneur</p>
         <p class="mt-[56px] text-[1.5rem] max-w-[500px] mb-[40px]">I am passionate about anything web development and
             internet of things!</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] mb-[100px] max-w-[500px]">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] mb-[50px] max-w-[500px]">
             <a href="https://kvolts-lab.com" class="flex items-center gap-2"><i
                     class="fa-solid fa-building text-5xl"></i> Founder of <span class="underline">Kilo Volts
                     Lab</span></a>
@@ -14,7 +14,7 @@
                     class="underline">TEF Certified Business Manager</span></a>
         </div>
         <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] mb-[100px] border-2 border-primary-500/20 rounded-xl p-4 bg-gray-900/50 backdrop-blur-sm relative electric-border">
+            class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] mb-[100px] border-2 border-primary-500/20 rounded-xl p-6 bg-gray-900/50 backdrop-blur-sm relative electric-border">
             <div class="flex items-start md:items-center gap-[30px] flex-col md:flex-row">
                 <img src="~/assets/images/me.jpg" alt="Ansima Elvis"
                     class="w-auto h-[80px] rounded-full inline-block float-left" />
@@ -28,7 +28,7 @@
                     technology.</p>
                 <p>I work on building modern web apps and IoT solutions while creating products that make a difference.
                 </p>
-                <div class="flex items-center gap-4 mt-[20px] dark:text-[#def858] text-primary-500 text-3xl relative">
+                <div class="flex items-center gap-4 mt-[20px] dark:text-[#def858] text-primary-500 text-3xl relative pb-[20px]">
                     <a href="https://www.linkedin.com/in/cibalinda-elvis/" target="_blank" rel="noopener noreferrer"><i
                             class="fa-brands fa-linkedin"></i></a>
                     <a href="https://github.com/ElvisAns" target="_blank" rel="noopener noreferrer"><i
@@ -82,7 +82,10 @@
             </blockquote>
         </div>
         <div class="flex flex-col justify-center items-center my-[100px]">
-            <h2 class="text-3xl font-bold text-center mb-8">Top Blogs</h2>
+            <div class="flex justify-between items-center w-full">
+                <h2 class="text-3xl font-bold text-center mb-8">Featured Blogs</h2>
+                <NuxtLink to="/blog" class="text-primary-500 underline"><UButton size="lg">View All <i class="fas fa-arrow-right"></i></UButton></NuxtLink>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
                 <!-- Loading State -->
                 <template v-if="pending">
@@ -98,15 +101,14 @@
 
                 <!-- Blogs -->
                 <template v-else>
-                    <UCard v-for="blog in blogs.slice(0, 3)" :key="blog.id" 
+                    <UCard v-for="blog in blogs.slice(0, 3)" :key="blog.id"
                         class="group cursor-pointer hover:-translate-y-1 transition-all duration-300"
-                        @click="window.open(blog.url, '_blank')"
-                    >
+                        @click="window.open(blog.url, '_blank')">
                         <template #header>
-                            <img v-if="blog.cover_image" :src="blog.cover_image" :alt="blog.title" 
+                            <img v-if="blog.cover_image" :src="blog.cover_image" :alt="blog.title"
                                 class="w-full h-48 object-cover rounded-t-lg" />
                         </template>
-                        
+
                         <div class="p-4">
                             <h3 class="font-semibold text-lg mb-2 group-hover:text-primary-500">{{ blog.title }}</h3>
                             <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">{{ blog.description }}</p>
@@ -119,12 +121,70 @@
                 </template>
             </div>
         </div>
+        <!-- After Blogs Section -->
+
+        <!-- Tech Stack Section -->
+        <div class="my-[100px]">
+            <h2 class="text-3xl font-bold text-center mb-8">Technologies I Work With</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <div v-for="tech in techStack" :key="tech.name"
+                    class="group flex flex-col items-center p-4 bg-gray-900/50 rounded-xl backdrop-blur-sm border border-gray-800 hover:border-primary-500/50 transition-all">
+                    <i v-if="!tech.image" :class="[tech.icon, 'text-4xl mb-2 group-hover:text-primary-500']"></i>
+                    <img v-else :src="tech.image" :alt="tech.name" class="w-auto h-[40px] mb-2 group-hover:scale-110 transition-all">
+                    <span class="text-sm text-gray-400">{{ tech.name }}</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- GitHub Stats -->
+        <div class="my-[100px] text-center">
+            <h2 class="text-3xl font-bold mb-8">Open Source Contributions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="flex justify-end">
+                    <img 
+                        src="https://github-readme-stats.vercel.app/api?username=ElvisAns&show_icons=true&theme=dark"
+                        alt="GitHub Stats" 
+                        class="w-full object-contain" 
+                    />
+                </div>
+                <div class="flex justify-end">
+                    <img 
+                        src="https://github-readme-streak-stats.herokuapp.com/?user=ElvisAns&theme=dark"
+                        alt="GitHub Streak" 
+                        class="w-full object-contain" 
+                    />
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="my-[100px] text-center">
+            <h2 class="text-3xl font-bold mb-4">Let's Work Together</h2>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+                Have a project in mind? I'm always open to discussing new opportunities and ideas.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="mailto:ansimapersic@gmail.com"
+                    class="bg-primary-500 text-white px-6 py-3 rounded-full hover:bg-primary-600 transition-colors">
+                    <i class="fas fa-envelope mr-2"></i>
+                    Get in Touch
+                </a>
+                <NuxtLink to="/projects"
+                    class="border border-primary-500 text-primary-500 px-6 py-3 rounded-full hover:bg-primary-500 hover:text-white transition-colors">
+                    <i class="fas fa-folder-open mr-2"></i>
+                    View Projects
+                </NuxtLink>
+            </div>
+        </div>
+        <!-- any idea of what can i put after the blogs and the footer? -->
     </main>
 </template>
 
 <script setup>
 import { useBrands } from '~/composables/useBrands'
 import { useProjectsAndTools } from '~/composables/useProjectsAndTools'
+import nuxtIcon from '~/assets/images/icons8-nuxt-js.svg'
+import jqueryIcon from '~/assets/images/jquery.svg'
 
 const { brands } = useBrands()
 const { tools, projects } = useProjectsAndTools()
@@ -149,6 +209,21 @@ onMounted(async () => {
         pending.value = false
     }
 })
+
+const techStack = [
+    { name: 'Laravel', icon: 'fab fa-laravel' },
+    { name: 'SQL', icon: 'fas fa-database' },
+    { name: 'JavaScript', icon: 'fab fa-js' },
+    { name: 'Vue.js', icon: 'fab fa-vuejs' },
+    { name: 'jQuery', icon: false, image: jqueryIcon },
+    { name: 'Nuxt.js', icon: false, image: nuxtIcon },
+    { name: 'Webflow', icon: 'fab fa-webflow' },
+    { name: 'Docker', icon: 'fab fa-docker' },
+    { name: 'AWS', icon: 'fab fa-aws' },
+    { name: 'Git', icon: 'fab fa-git-alt' },
+    { name: 'IoT', icon: 'fas fa-microchip' },
+    { name: 'Python', icon: 'fab fa-python' }
+]
 </script>
 
 <style>
