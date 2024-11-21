@@ -230,4 +230,10 @@ watch(() => article.value?.body_html, () => {
 .highlight__panel-action {
     display: none;
 }
+code:not(code.hljs), .prose a {
+    word-wrap: break-word;
+}
+code:not(code.hljs) {
+    @apply bg-slate-700 p-1 rounded-md;
+}
 </style>
