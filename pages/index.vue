@@ -57,11 +57,11 @@
                     <img :src="brand.image" :alt="brand.name" :title="brand.name" :class="[
                         'w-auto h-[40px] rounded-md transition-all duration-300 group-hover:scale-110 object-contain',
                         brand.whiteBg ? 'bg-white p-2' : '',
-                        'mix-blend-luminosity opacity-70 group-hover:opacity-100 group-hover:mix-blend-normal'
+                        'opacity-70 group-hover:opacity-100'
                     ]" />
 
                     <!-- Hover Overlay with Name -->
-                    <div class="absolute inset-0 flex items-center justify-center bg-black/70 opacity-0 
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/80 dark:bg-black/70 opacity-0 
                                 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
                         <span class="text-white text-sm font-medium">
                             {{ brand.name }}
