@@ -1,7 +1,7 @@
 <template>
     <main class="max-w-[1280px] mx-auto px-[20px] mt-[50px] text-black dark:text-white">
         <h1 class="dark:text-white text-primary-500 text-[3rem] md:text-[5rem] font-bold">Small Tools I have built</h1>
-        <p class="dark:text-[#def858] text-primary-500 text-3xl mb-12">Open-source tools and utilities I've created to help developers & makers</p>
+        <p class="dark:text-[#def858] text-primary-500 text-3xl mb-12">Open-source tools and utilities I've created to make internet a better place.</p>
 
         <!-- Tools Grid -->
         <div class="space-y-12">

@@ -1,7 +1,7 @@
 <template>
     <main class="max-w-[1280px] mx-auto px-[20px] mt-[50px] text-black dark:text-white">
         <h1 class="dark:text-white text-primary-500 text-[3rem] md:text-[5rem] font-bold">Projects</h1>
-        <p class="dark:text-[#def858] text-primary-500 text-3xl mb-12">Things I have built ranging from small to large.</p>
+        <p class="dark:text-[#def858] text-primary-500 text-3xl mb-12">Featured projects I have worked on or currently working on.</p>
 
         <!-- Projects Grid -->
         <div class="space-y-12">
