@@ -20,6 +20,12 @@
                     </NuxtLink>
                 </li>
                 <li>
+                    <button @click="toggleDarkMode" class="flex items-center gap-2 hover:bg-red_mine-500 hover:text-white px-4 py-1 rounded-md">
+                        <UIcon :name="isDark ? 'i-heroicons-moon' : 'i-heroicons-sun'" class="w-6 h-6" />
+                        {{ isDark ? 'Dark' : 'Light' }}
+                    </button>
+                </li>
+                <li>
                     <UButton to="https://calendly.com/ansimapersic/30min" target="_blank" color="white" size="lg">
                         <UIcon name="i-heroicons-calendar-days" class="w-4 h-4 mr-2" />
                         Book a discovery call
@@ -77,6 +83,14 @@
                             {{ item.label }}
                         </NuxtLink>
                     </li>
+                    <li class="hover:bg-red_mine-500 hover:text-white rounded-md"
+                        @click="toggleDarkMode"
+                    >
+                        <button class="flex items-center gap-2 px-4 py-3 w-full">
+                            <UIcon :name="isDark ? 'i-heroicons-moon' : 'i-heroicons-sun'" class="w-6 h-6" />
+                            {{ isDark ? 'Dark' : 'Light' }}
+                        </button>
+                    </li>
                     <li class="pt-12 pb-4">
                         <UButton to="https://calendly.com/ansimapersic/30min" block target="_blank" color="white" size="lg">
                             <UIcon name="i-heroicons-calendar-days" class="w-6 h-6 mr-2" />
@@ -113,6 +127,79 @@ onMounted(() => {
         }
     })
 })
+
+const colorMode = useColorMode()
+const toast = useToast()
+
+const isDark = computed({
+  get() {
+    return colorMode.value === 'dark'
+  },
+  set() {
+    toggleDarkMode()
+  }
+})
+
+const createConfirmToast = ({ title, description, confirmLabel, cancelLabel }) => {
+    return new Promise((resolve) => {
+        toast.add({
+            title,
+            description,
+            timeout: 0,
+            closable: false,
+            actions: [
+                {
+                    label: cancelLabel,
+                    click: () => {
+                        toast.remove()
+                        resolve(false)
+                    }
+                },
+                {
+                    label: confirmLabel,
+                    click: () => {
+                        toast.remove()
+                        resolve(true)
+                    },
+                    color: 'red'
+                }
+            ]
+        })
+    })
+}
+
+const toggleDarkMode = async () => {
+    if (colorMode.value === 'dark') {
+        const confirmed = await createConfirmToast({
+            title: 'Are you sure?',
+            description: 'Light mode may harm your eyes! 👀',
+            confirmLabel: "I'm feeling lucky!",
+            cancelLabel: 'Stay in dark mode'
+        })
+        
+        if (confirmed) {
+            const success = Math.random() > 0.7 // 30% chance of success
+            
+            if (success) {
+                colorMode.preference = 'light'
+                toast.add({
+                    title: 'Congratulations! 🎉',
+                    description: 'You won the light mode lottery!',
+                    icon: 'i-heroicons-sun-20-solid'
+                })
+            } else {
+                toast.add({
+                    title: 'Not this time! 😅',
+                    description: 'Try again, we believe in you!',
+                    icon: 'i-heroicons-moon-20-solid'
+                })
+            }
+        }
+    } else {
+        // Switching to dark mode is always allowed
+        colorMode.preference = 'dark'
+    }
+}
 </script>
 
 <style scoped>
