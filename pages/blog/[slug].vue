@@ -68,6 +68,7 @@
     <div class="flex items-center gap-4 mt-12 mb-12 w-full justify-center">
         <UButton size="xl" to="/blog"><i class="fas fa-arrow-left"></i> View all articles</UButton>
     </div>
+    <InternalAds />
 </template>
 
 <script setup>

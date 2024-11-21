@@ -45,8 +45,6 @@
                 </div>
             </div>
         </div>
-
-
         <div class="mb-[100px]">
             <h2 class="text-3xl font-bold text-center">Companies I have worked with </h2>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-[20px]">
@@ -81,6 +79,7 @@
                 <p>"A ship in harbor is safe, but that is not what ships are built for."</p>
             </blockquote>
         </div>
+        <InternalAds />
         <div class="flex flex-col justify-center items-center my-[100px]">
             <div class="flex justify-between items-center w-full">
                 <h2 class="text-3xl font-bold text-center mb-8">Featured Blogs</h2>

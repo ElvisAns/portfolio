@@ -59,7 +59,7 @@
                 </div>
             </div>
         </div>
-
+        <InternalAds />
         <!-- Principles -->
         <div class="mb-20">
             <h2 class="text-3xl font-bold mb-8">My Principles</h2>
@@ -71,14 +71,14 @@
                         Pay attention to the delivered value no biased preference
                     </p>
                 </div>
-                <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl border border-gray-800">
+                <div class="dark:bg-gray-900/50 bg-white backdrop-blur-sm p-6 rounded-xl border border-gray-800">
                     <i class="fas fa-rocket text-primary-500 text-2xl mb-4"></i>
                     <h3 class="text-xl font-semibold mb-3">Practical Solutions</h3>
                     <p class="text-gray-400">
                         Clients and users need a working product, no complicated stack
                     </p>
                 </div>
-                <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl border border-gray-800">
+                <div class="dark:bg-gray-900/50 bg-white backdrop-blur-sm p-6 rounded-xl border border-gray-800">
                     <i class="fas fa-expand-arrows-alt text-primary-500 text-2xl mb-4"></i>
                     <h3 class="text-xl font-semibold mb-3">Scalable Architecture</h3>
                     <p class="text-gray-400">
