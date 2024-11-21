@@ -151,14 +151,12 @@ const createConfirmToast = ({ title, description, confirmLabel, cancelLabel }) =
                 {
                     label: cancelLabel,
                     click: () => {
-                        toast.remove()
                         resolve(false)
                     }
                 },
                 {
                     label: confirmLabel,
                     click: () => {
-                        toast.remove()
                         resolve(true)
                     },
                     color: 'red'
