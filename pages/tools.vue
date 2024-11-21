@@ -82,7 +82,7 @@
                 </div>
 
                 <!-- Fallback for tools without images -->
-                <div v-else class="relative h-[300px] rounded-xl overflow-hidden bg-gray-900/50 flex items-center justify-center">
+                <div v-else class="relative h-[300px] rounded-xl overflow-hidden dark:bg-gray-900/50 bg-white flex items-center justify-center">
                     <div class="text-center p-6">
                         <i class="fas fa-code text-6xl text-primary-500/20 mb-4"></i>
                         <p class="text-gray-400">Demo coming soon</p>

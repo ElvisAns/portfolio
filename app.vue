@@ -4,6 +4,7 @@
     <NuxtRouteAnnouncer />
     <NuxtPage />
     <Footer />
+    <UNotifications />
   </div>
 </template>
 

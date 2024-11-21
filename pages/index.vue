@@ -14,7 +14,7 @@
                     class="underline">TEF Certified Business Manager</span></a>
         </div>
         <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] mb-[100px] border-2 border-primary-500/20 rounded-xl p-6 bg-gray-900/50 backdrop-blur-sm relative electric-border">
+            class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] mb-[100px] border-2 border-primary-500/20 rounded-xl p-6 dark:bg-gray-900/50 bg-white backdrop-blur-sm relative electric-border">
             <div class="flex items-start md:items-center gap-[30px] flex-col md:flex-row">
                 <img src="~/assets/images/me.jpg" alt="Ansima Elvis"
                     class="w-auto h-[80px] rounded-full inline-block float-left" />
@@ -51,7 +51,7 @@
             <h2 class="text-3xl font-bold text-center">Companies I have worked with </h2>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-[20px]">
                 <!-- Brand Cards -->
-                <a v-for="brand in brands" :key="brand.url" :href="brand.url" target="_blank" class="group relative bg-gray-900/50 p-6 rounded-xl backdrop-blur-sm border border-gray-800 
+                <a v-for="brand in brands" :key="brand.url" :href="brand.url" target="_blank" class="group relative dark:bg-gray-900/50 bg-white p-6 rounded-xl backdrop-blur-sm border border-gray-800 
                            hover:bg-gray-800/70 transition-all duration-300 
                            flex items-center justify-center">
                     <img :src="brand.image" :alt="brand.name" :title="brand.name" :class="[
@@ -143,7 +143,7 @@
             <h2 class="text-3xl font-bold text-center mb-8">Technologies I Work With</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
                 <div v-for="tech in techStack" :key="tech.name"
-                    class="group flex flex-col items-center p-4 bg-gray-900/50 rounded-xl backdrop-blur-sm border border-gray-800 hover:border-primary-500/50 transition-all">
+                    class="group flex flex-col items-center p-4 dark:bg-gray-900/50 bg-white rounded-xl backdrop-blur-sm border border-gray-800 hover:border-primary-500/50 transition-all">
                     <i v-if="!tech.image" :class="[tech.icon, 'text-4xl mb-2 group-hover:text-primary-500']"></i>
                     <img v-else :src="tech.image" :alt="tech.name" class="w-auto h-[40px] mb-2 group-hover:scale-110 transition-all">
                     <span class="text-sm text-gray-400">{{ tech.name }}</span>
