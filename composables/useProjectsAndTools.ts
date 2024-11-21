@@ -8,6 +8,7 @@ import faktshare from '~/assets/images/projects/fakt.png'
 import image_magnet from '~/assets/images/projects/image-magnet.png'
 import voice_powered_expense_tracker from '~/assets/images/projects/voice.png'
 import chatbot from '~/assets/images/projects/chatbot.png'
+import awesome_careers from '~/assets/images/projects/awesome-careers.png'
 
 type ToolAndProject = {
     title: string
@@ -43,6 +44,19 @@ export const useProjectsAndTools = (): { tools: ToolAndProject[], projects: Tool
             hasModal: true,
             status: 'completed',
             sourceCode: 'https://github.com/ElvisAns/webflow_local_bridge'
+        },
+        {
+            title : "Awesome Careers",
+            shortDescription: "All in tool to help you find remote programming jobs",
+            description: "Awesome Careers is a tool that helps you find remote jobs. We aggregate jobs from different sources and help you find the perfect job for you. Plus you have access to AI to help draft your resume and cover letter.",
+            link: "https://awesome-career.fly.dev/",
+            techStack: ["Nuxt.js", "Gemini API", "Google search API"],
+            challenges: ["API integration", "Building a scalable system", "AI integration", "Advanced search queries"],
+            date: "2024",
+            inProgress: true,
+            hasModal: false,
+            image: awesome_careers,
+            status: 'in-progress',
         },
         {
             title: 'AI Chatbot',
