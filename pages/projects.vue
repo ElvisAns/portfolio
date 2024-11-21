@@ -55,7 +55,7 @@
                         class="absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-700"
                         :style="{
                             backgroundImage: `url(${project.image})`,
-                            backgroundPosition: 'top',
+                            backgroundPosition: 'top left',
                             backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat'
                         }"

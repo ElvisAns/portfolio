@@ -73,7 +73,9 @@
                         class="absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-700"
                         :style="{
                             backgroundImage: `url(${tool.image})`,
-                            backgroundPosition: tool.imagePosition || 'center'
+                            backgroundPosition: 'top left',
+                            backgroundSize: 'cover',
+                            backgroundRepeat: 'no-repeat'
                         }"
                     ></div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
