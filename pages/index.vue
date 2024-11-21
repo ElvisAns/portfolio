@@ -28,7 +28,7 @@
                     technology.</p>
                 <p>I work on building modern web apps and IoT solutions while creating products that make a difference.
                 </p>
-                <div class="flex items-center gap-4 mt-[20px] dark:text-[#def858] text-primary-500 text-3xl relative pb-[20px]">
+                <div class="flex items-center gap-4 mt-[20px] dark:text-[#def858] text-primary-500 text-3xl relative pb-[20px] flex-wrap">
                     <a href="https://www.linkedin.com/in/cibalinda-elvis/" target="_blank" rel="noopener noreferrer"><i
                             class="fa-brands fa-linkedin"></i></a>
                     <a href="https://github.com/ElvisAns" target="_blank" rel="noopener noreferrer"><i
