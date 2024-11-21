@@ -5,11 +5,11 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <!-- About Section -->
                 <div>
-                    <h3 class="text-xl font-bold mb-4 text-white">Ansima Elvis</h3>
+                    <h3 class="text-xl font-bold mb-4 dark:text-white text-black">Ansima Elvis</h3>
                     <p class="text-gray-400 mb-4">
                         Full-Stack Developer & Entrepreneur building modern web applications and IoT solutions.
                     </p>
-                    <div class="flex space-x-4 text-gray-400">
+                    <div class="flex space-x-4 dark:text-gray-400 text-gray-800">
                         <a href="https://www.linkedin.com/in/cibalinda-elvis/" 
                             target="_blank" 
                             class="hover:text-primary-500 transition-colors"
@@ -33,8 +33,8 @@
 
                 <!-- Quick Links -->
                 <div>
-                    <h3 class="text-xl font-bold mb-4 text-white">Quick Links</h3>
-                    <ul class="space-y-2 text-gray-400">
+                    <h3 class="text-xl font-bold mb-4 dark:text-white text-black">Quick Links</h3>
+                    <ul class="space-y-2 dark:text-gray-400 text-gray-800">
                         <li>
                             <NuxtLink to="/about" class="hover:text-primary-500 transition-colors">
                                 About Me
@@ -60,8 +60,8 @@
 
                 <!-- Contact Info -->
                 <div>
-                    <h3 class="text-xl font-bold mb-4 text-white">Get in Touch</h3>
-                    <ul class="space-y-2 text-gray-400">
+                    <h3 class="text-xl font-bold mb-4 dark:text-white text-black">Get in Touch</h3>
+                    <ul class="space-y-2 dark:text-gray-400 text-gray-800">
                         <li class="flex items-center space-x-2">
                             <i class="fas fa-envelope"></i>
                             <a href="mailto:ansimapersic@gmail.com" class="hover:text-primary-500 transition-colors">
@@ -95,7 +95,7 @@
             </div>
 
             <!-- Bottom Bar -->
-            <div class="pt-8 border-t border-gray-800 text-center text-gray-400">
+            <div class="pt-8 border-t border-gray-800 text-center dark:text-gray-400 text-gray-800">
                 <p>© {{ new Date().getFullYear() }} Ansima Elvis. All rights reserved.</p>
                 <p class="mt-2 text-sm">
                     Built with ❤️
