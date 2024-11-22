@@ -235,6 +235,7 @@ code:not(code.hljs), .prose a {
     word-wrap: break-word;
 }
 code:not(code.hljs) {
-    @apply bg-slate-700 p-1 rounded-md;
+    @apply bg-slate-900 p-1 rounded-md;
+    color: white;
 }
 </style>
