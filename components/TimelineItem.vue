@@ -11,7 +11,7 @@
             <div class="absolute -left-[5px] top-2 w-2 h-2 rounded-full bg-primary-500"></div>
             
             <h3 class="text-xl font-semibold mb-2">{{ title }}</h3>
-            <p class="text-gray-400">{{ description }}</p>
+            <p class="text-gray-400 timeline-description" v-html="description"></p>
         </div>
     </div>
 </template>
@@ -23,3 +23,9 @@ defineProps({
     description: String
 })
 </script> 
+
+<style scoped>
+.timeline-description a{
+    color: red;
+}
+</style>

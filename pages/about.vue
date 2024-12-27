@@ -64,30 +64,32 @@
         <div class="mb-20">
             <h2 class="text-3xl font-bold mb-8">My Principles</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="dark:bg-gray-900/50 bg-white backdrop-blur-sm p-6 rounded-xl border border-gray-800">
-                    <i class="fas fa-bullseye text-primary-500 text-2xl mb-4"></i>
+                <div class="dark:bg-gray-800 bg-white backdrop-blur-sm p-6 rounded-xl border border-gray-800">
+                    <i class="fas fa-bullseye text-primary-500 text-2xl mb-5" aria-hidden="true"></i>
+                    <span class="sr-only">Value-Driven Development</span>
                     <h3 class="text-xl font-semibold mb-3">Value-Driven Development</h3>
                     <p class="text-gray-400">
-                        Pay attention to the delivered value no biased preference
+                        Focus on delivering tangible value without bias.
                     </p>
                 </div>
-                <div class="dark:bg-gray-900/50 bg-white backdrop-blur-sm p-6 rounded-xl border border-gray-800">
-                    <i class="fas fa-rocket text-primary-500 text-2xl mb-4"></i>
+                <div class="dark:bg-gray-800 bg-white backdrop-blur-sm p-6 rounded-xl border border-gray-800">
+                    <i class="fas fa-check text-primary-500 text-2xl mb-5" aria-hidden="true"></i>
+                    <span class="sr-only">Practical Solutions</span>
                     <h3 class="text-xl font-semibold mb-3">Practical Solutions</h3>
                     <p class="text-gray-400">
-                        Clients and users need a working product, no complicated stack
+                        Provide functional solutions with straightforward technology stacks.Clients and users need a working product, no complicated stack!
                     </p>
                 </div>
-                <div class="dark:bg-gray-900/50 bg-white backdrop-blur-sm p-6 rounded-xl border border-gray-800">
-                    <i class="fas fa-expand-arrows-alt text-primary-500 text-2xl mb-4"></i>
+                <div class="dark:bg-gray-800 bg-white backdrop-blur-sm p-6 rounded-xl border border-gray-800">
+                    <i class="fas fa-expand-arrows-alt text-primary-500 text-2xl mb-5" aria-hidden="true"></i>
+                    <span class="sr-only">Scalable Architecture</span>
                     <h3 class="text-xl font-semibold mb-3">Scalable Architecture</h3>
                     <p class="text-gray-400">
-                        Build with scalability in mind, a side project can become hard to manage
+                        Design with scalability in mind for future growth. 
                     </p>
                 </div>
             </div>
         </div>
-
         <!-- Journey Timeline -->
         <div class="mb-20">
             <h2 class="text-3xl font-bold mb-8">My Journey</h2>
@@ -134,44 +136,44 @@ const timeline = [
     {
         year: '2016',
         title: 'The Beginning',
-        description: 'Started with C & Arduino, building embedded systems on PIC'
+        description: 'Started exploring programming with C and Arduino, focusing on building embedded systems using PIC microcontrollers.'
     },
     {
         year: '2017',
         title: 'Web Development Journey',
-        description: 'Learned HTML, CSS & PHP. Completed my first website project, followed by 4 more clients'
+        description: 'Learned HTML, CSS, and PHP. Successfully completed my first website project and delivered additional websites for clients.'
     },
     {
         year: '2018',
         title: 'First Major Project',
-        description: 'Built an attendance system combining web development and Arduino skills'
+        description: 'Developed an attendance system that combined my skills in web development and Arduino.'
     },
     {
         year: '2019',
         title: 'Professional Career Begins',
-        description: 'First enterprise project: Vantoria, which helped CTLCO generate revenue in 2021 and later we started Atalaku Xpress'
+        description: 'Worked on my first enterprise project, Vantoria, which helped CTLCO generate revenue in 2021. Later, we initiated Atalaku Xpress.'
     },
     {
         year: '2021',
         title: 'Entrepreneurial Venture',
-        description: 'Started Kilo volt lab, a startup aimed at solving African problems with tech'
+        description: 'Founded <a class="text-primary-500 underline" href="https://kvolts-lab.com">Kilo Volts Lab</a>, a startup dedicated to solving African challenges through technology. Our flagship product: <a class="text-primary-500 underline" href="https://gethealth-link.com">HealthLink</a>.'
     },
     {
         year: '2022',
         title: 'International Collaboration',
-        description: 'Joined Tiki project, first experience working with an international team'
+        description: 'Joined Evoludata and contributed to the Tiki Wiki CMS project, marking my first experience working with an international team.'
     },
     {
         year: '2023',
         title: 'Career Growth',
-        description: 'Joined Outliant as a full-time employee'
+        description: 'Became a full-time engineer at Outliant, focusing on advanced web development projects.'
     },
     {
         year: '2024',
         title: 'Continuing the Journey',
-        description: 'Excited and happy being with Outliant, looking forward to new challenges'
+        description: 'Thriving at Outliant and eagerly anticipating new challenges and growth opportunities.'
     }
-]
+];
 
 // SEO
 useHead({
