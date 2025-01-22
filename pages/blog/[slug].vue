@@ -17,8 +17,7 @@
             <div class="flex items-center gap-6 text-sm text-gray-500 dark:text-gray-400">
                 <span>{{ article.readable_publish_date }}</span>
                 <span>{{ article.reading_time_minutes }} min read</span>
-                <a :href="`https://dev.to/elvisans/${article.slug}`" target="_blank"
-                    class="flex items-center gap-1">
+                <a :href="`https://dev.to/elvisans/${article.slug}`" target="_blank" class="flex items-center gap-1">
                     <i class="fas fa-heart text-red-500"></i>
                     {{ article.public_reactions_count }}
                 </a>
@@ -99,7 +98,7 @@ hljs.registerLanguage('typescript', typescript)
 hljs.registerLanguage('sql', sql)
 
 definePageMeta({
-  middleware: ["blogs"]
+    middleware: ["blogs"]
 })
 
 const route = useRoute()
@@ -112,13 +111,13 @@ const applySyntaxHighlighting = () => {
     nextTick(() => {
         document.querySelectorAll('pre').forEach((pre) => {
             pre.classList.add('code-block')
-            
+
             // Extract the language from the second class name
             const language = pre.classList[1] || 'text'
-            
+
             // Add as data attribute
             pre.setAttribute('data-language', language)
-            
+
             // Highlight the code block
             pre.querySelectorAll('code').forEach((block) => {
                 hljs.highlightElement(block)
@@ -131,27 +130,20 @@ onMounted(async () => {
     try {
         const response = await fetch('https://dev.to/api/articles?username=elvisans')
         const articles = await response.json()
-        const matchingArticle = articles.find(a => a.slug === route.params.slug)
+        const matchingArticle = articles.find(a => a.slug === route.params.slug) //assume the middleware can't allow non matching article to pass
+        const articleResponse = await fetch(`https://dev.to/api/articles/${matchingArticle.id}`)
+        article.value = await articleResponse.json()
 
-        if (matchingArticle) {
-            const articleResponse = await fetch(`https://dev.to/api/articles/${matchingArticle.id}`)
-            article.value = await articleResponse.json()
-
-            const { setSeo } = useSeo()
-            setSeo({
-                title: `${article.value.title} | Ansima's Blog`,
-                description: article.value.description,
-                image: article.value.cover_image,
-                type: 'article'
-            })
-
-            currentUrl.value = window.location.href
-
-            // Apply syntax highlighting after content is loaded
-            applySyntaxHighlighting()
-        } else {
-            throw new Error('Article not found')
-        }
+        const { setSeo } = useSeo()
+        setSeo({
+            title: `${article.value.title} | Ansima's Blog`,
+            description: article.value.description,
+            image: article.value.cover_image,
+            type: 'article'
+        })
+        currentUrl.value = window.location.href
+        // Apply syntax highlighting after content is loaded
+        applySyntaxHighlighting()
     } catch (error) {
         console.error('Error fetching article:', error)
         navigateTo('/404')
@@ -231,13 +223,17 @@ watch(() => article.value?.body_html, () => {
     letter-spacing: 0.05em;
     z-index: 2;
 }
+
 /* TODO : this hack is to hide the copy button from the highlight.js panel, it should be removed when the issue is fixed */
 .highlight__panel-action {
     display: none;
 }
-code:not(code.hljs), .prose a {
+
+code:not(code.hljs),
+.prose a {
     word-wrap: break-word;
 }
+
 code:not(code.hljs) {
     @apply bg-slate-900 p-1 rounded-md;
     color: white;
