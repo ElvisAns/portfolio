@@ -1,0 +1,55 @@
+name: Generate Blog Pages
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight (adjust as needed)
+  workflow_dispatch: # Allows manual triggering of the workflow
+
+jobs:
+  generate-blogs:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          ref: production # Ensure you're checking out the production branch
+
+      # Step 2: Verify the branch is 'production'
+      - name: Verify Branch
+        run: |
+          CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+          echo "Current branch is $CURRENT_BRANCH"
+          if [ "$CURRENT_BRANCH" != "master" ]; then
+            echo "Not on production branch. Exiting..."
+            exit 1
+          fi
+
+      # Step 3: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20' # Adjust version based on your requirements
+
+      # Step 4: Run the script to generate blog pages
+      - name: Generate Blog Pages
+        run: node generate-blog-pages.js
+
+      # Step 5: Check for changes
+      - name: Check for Changes
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+          git add .
+          if git diff-index --quiet HEAD; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "bot-add-new-blogs"
+
+      # Step 6: Push changes to the production branch
+      - name: Push Changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: git push origin production
