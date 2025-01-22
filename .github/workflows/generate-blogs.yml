@@ -50,6 +50,4 @@ jobs:
 
       # Step 6: Push changes to the production branch
       - name: Push Changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: git push origin production
