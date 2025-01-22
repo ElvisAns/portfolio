@@ -17,5 +17,8 @@
     "nuxt": "^3.14.159",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "devDependencies": {
+    "node-fetch": "^3.3.2"
   }
 }
