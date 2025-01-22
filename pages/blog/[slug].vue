@@ -98,6 +98,10 @@ hljs.registerLanguage('json', json)
 hljs.registerLanguage('typescript', typescript)
 hljs.registerLanguage('sql', sql)
 
+definePageMeta({
+  middleware: ["blogs"]
+})
+
 const route = useRoute()
 const article = ref(null)
 const pending = ref(true)
