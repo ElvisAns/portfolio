@@ -35,10 +35,11 @@ jobs:
         with:
           node-version: '20'
 
-      # Step 4: Run the script to generate blog pages
+      # Step 4: Install deps and Run the script to generate blog pages
       - name: Generate Blog Pages
-        run: node generate-blog-pages.js
-
+        run: |
+          npm install --save-dev node-fetch
+          node generate-blog-pages.js
       # Step 5: Check for changes
       - name: Check for Changes
         run: |
