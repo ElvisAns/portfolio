@@ -1,3 +1,38 @@
+import { existsSync, mkdirSync, writeFileSync } from 'fs';
+import { join,dirname } from 'path';
+import { fileURLToPath } from 'url';
+import fetch from 'node-fetch';
+
+// Resolve __dirname equivalent
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Step 1: Fetch meta titles and slugs from the API
+function fetchMetaData(apiUrl) {
+  return new Promise(async (resolve, reject) => {
+    try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+          throw new Error(`HTTP Error: ${response.status}`);
+        }
+        const metaData = await response.json();
+        resolve(metaData);
+      } catch (error) {
+        reject({error: error.message });
+      }
+  });
+}
+
+// Step 2: Generate .vue files
+function generateVueFiles(metaData, outputDir) {
+  // Ensure the output directory exists
+  if (!existsSync(outputDir)) {
+    mkdirSync(outputDir, { recursive: true });
+  }
+
+  metaData.forEach(({ slug, title, description, social_image }) => {
+    const filePath = join(outputDir, `${slug}.vue`);
+    const vueTemplate = `
 <template>
     <main v-if="article" class="max-w-[1280px] mx-auto px-[20px] mt-[40px] text-black dark:text-white">
         <div class="flex items-center gap-4 mb-12">
@@ -17,7 +52,7 @@
             <div class="flex items-center gap-6 text-sm text-gray-500 dark:text-gray-400">
                 <span>{{ article.readable_publish_date }}</span>
                 <span>{{ article.reading_time_minutes }} min read</span>
-                <a :href="`https://dev.to/elvisans/${article.slug}`" target="_blank" class="flex items-center gap-1">
+                <a :href="\`https://dev.to/elvisans/${slug}\`" target="_blank" class="flex items-center gap-1">
                     <i class="fas fa-heart text-red-500"></i>
                     {{ article.public_reactions_count }}
                 </a>
@@ -36,17 +71,17 @@
         <!-- Share Buttons -->
         <div class="flex items-center gap-4 mb-12">
             <span class="text-sm">Share this article:</span>
-            <a :href="`https://twitter.com/intent/tweet?text=${article.title}&url=${currentUrl}`" target="_blank"
+            <a :href="\`https://twitter.com/intent/tweet?text=${title}&url=\${currentUrl}\`" target="_blank"
                 class="text-primary-500 hover:text-primary-600">
                 <i class="fab fa-twitter text-xl"></i>
             </a>
-            <a :href="`https://www.linkedin.com/sharing/share-offsite/?url=${currentUrl}`" target="_blank"
+            <a :href="\`https://www.linkedin.com/sharing/share-offsite/?url=\${currentUrl}\`" target="_blank"
                 class="text-primary-500 hover:text-primary-600">
                 <i class="fab fa-linkedin text-xl"></i>
             </a>
         </div>
         <div class="flex items-center gap-4 mb-12 prose dark:prose-invert prose-lg">
-            <p>You can like and comment this article on <a :href="`https://dev.to/elvisans/${article.slug}`"
+            <p>You can like and comment this article on <a :href="\`https://dev.to/elvisans/${slug}\`"
                     target="_blank" class="text-primary-500 hover:text-primary-600">dev.to</a></p>
         </div>
     </main>
@@ -84,6 +119,15 @@ import ruby from 'highlight.js/lib/languages/ruby'
 import json from 'highlight.js/lib/languages/json'
 import typescript from 'highlight.js/lib/languages/typescript'
 import sql from 'highlight.js/lib/languages/sql'
+
+
+const { setSeo } = useSeo()
+setSeo({
+    title: \`${title} | Ansima's Blog\`,
+    description: \`${description}\`,
+    image: \`${social_image}\`,
+    type: 'article'
+})
 
 // Register the languages you want to support
 hljs.registerLanguage('javascript', javascript)
@@ -128,16 +172,8 @@ const applySyntaxHighlighting = () => {
 
 onMounted(async () => {
     try {
-        const articleResponse = await fetch(`https://dev.to/api/articles/elvisans/${route.params.slug}`)
+        const articleResponse = await fetch(\`https://dev.to/api/articles/elvisans/${slug}\`)
         article.value = await articleResponse.json()
-
-        const { setSeo } = useSeo()
-        setSeo({
-            title: `${article.value.title} | Ansima's Blog`,
-            description: article.value.description,
-            image: article.value.cover_image,
-            type: 'article'
-        })
         currentUrl.value = window.location.href
         // Apply syntax highlighting after content is loaded
         applySyntaxHighlighting()
@@ -236,3 +272,31 @@ code:not(code.hljs) {
     color: white;
 }
 </style>
+    `;
+
+    // Write the .vue file
+    writeFileSync(filePath, vueTemplate.trim());
+    console.log(`Generated: ${filePath}`);
+  });
+}
+
+// Step 3: Main function
+async function main() {
+  const apiUrl = 'https://dev.to/api/articles?username=elvisans';
+  const outputDir = join(__dirname, 'pages/blog');
+
+  console.log('Fetching meta data...');
+  const metaData = await fetchMetaData(apiUrl);
+
+  if (metaData.length === 0) {
+    console.log('No data found. Exiting.');
+    return;
+  }
+
+  console.log('Generating .vue files...');
+  generateVueFiles(metaData, outputDir);
+
+  console.log('All .vue files generated successfully.');
+}
+
+main().catch(console.error);

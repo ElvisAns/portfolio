@@ -10,8 +10,5 @@ export default defineNuxtConfig({
   site: {
     url: 'https://ansima.dev',
     name: 'Ansima Portfolio Site',
-  },
-  sitemap: {
-    sources: ['/api/__sitemap__/urls'],
-  },
+  }
 })

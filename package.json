@@ -3,10 +3,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
+    "build": "node generate-blog-pages.js ; nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
+    "generate": "node generate-blog-pages.js ; nuxt generate",
+    "preview": "node generate-blog-pages.js ; nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
