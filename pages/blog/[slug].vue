@@ -128,10 +128,7 @@ const applySyntaxHighlighting = () => {
 
 onMounted(async () => {
     try {
-        const response = await fetch('https://dev.to/api/articles?username=elvisans')
-        const articles = await response.json()
-        const matchingArticle = articles.find(a => a.slug === route.params.slug) //assume the middleware can't allow non matching article to pass
-        const articleResponse = await fetch(`https://dev.to/api/articles/${matchingArticle.id}`)
+        const articleResponse = await fetch(`https://dev.to/api/articles/elvisans/${route.params.slug}`)
         article.value = await articleResponse.json()
 
         const { setSeo } = useSeo()
