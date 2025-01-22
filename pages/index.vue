@@ -82,7 +82,7 @@
         <InternalAds />
         <div class="flex flex-col justify-center items-center my-[100px]">
             <div class="flex justify-between items-center w-full">
-                <h2 class="text-3xl font-bold text-center mb-8">Featured Blogs</h2>
+                <h2 class="text-3xl font-bold text-center mb-8">Recent Articles</h2>
                 <NuxtLink to="/blog" class="text-primary-500 underline"><UButton size="lg">View All <i class="fas fa-arrow-right"></i></UButton></NuxtLink>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
@@ -101,7 +101,7 @@
                 <!-- Blogs -->
                 <template v-else>
                     <NuxtLink 
-                        v-for="blog in blogs.slice(0, 3)" 
+                        v-for="blog in blogs" 
                         :key="blog.id"
                         :to="`/blog/${blog.slug}`"
                         class="block"
@@ -213,10 +213,10 @@ const pending = ref(true)
 
 onMounted(async () => {
     try {
-        const response = await fetch('https://dev.to/api/articles?username=elvisans')
+        const response = await fetch('https://dev.to/api/articles?username=elvisans&page=1&per_page=3')
         const articles = await response.json()
         // Sort by popularity (reactions count)
-        blogs.value = articles.sort((a, b) => b.public_reactions_count - a.public_reactions_count)
+        blogs.value = [...articles]
     } catch (error) {
         console.error('Error fetching blogs:', error)
     } finally {
