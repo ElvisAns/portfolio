@@ -1,10 +1,10 @@
 <template>
     <main v-if="article" class="max-w-[1280px] mx-auto px-[20px] mt-[40px] text-black dark:text-white">
         <div class="flex items-center gap-4 mb-12">
-            <UButton @click="router.back()" class="flex items-center gap-2">
+            <NuxtLink href="/blog" class="flex items-center gap-2">
                 <UIcon name="i-heroicons-arrow-left" class="w-4 h-4 mr-2" />
-                Go back
-            </UButton>
+                View all articles
+            </NuxtLink>
         </div>
         <!-- Article Header -->
         <div class="mb-12">
