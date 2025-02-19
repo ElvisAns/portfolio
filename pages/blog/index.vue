@@ -63,6 +63,10 @@
                 </UCard>
             </template>
         </div>
+        
+        <div v-if="!pending" class="flex flex-wrap w-full justify-center gap-6 mt-10">
+                    <UButton size="lg" label="Load More" :loading="loadingMoreBlog" :disabled="noMoreBlog" @click="loadMoreUnder();"></UButton>
+                </div>
     </main>
 </template>
 
@@ -74,7 +78,13 @@ setSeo({
 })
 
 const blogs = ref([])
-const pending = ref(true)
+const pending = ref(true);
+const loadingMoreBlog = ref(false);
+const noMoreBlog = ref(false);
+let currentPage = 1;
+let perPage = 6;
+
+const nextBatch = ref([]);
 
 const navigateToBlog = (blog) => {
     // Create SEO-friendly URL using the slug
@@ -83,13 +93,42 @@ const navigateToBlog = (blog) => {
 
 onMounted(async () => {
     try {
-        const response = await fetch('https://dev.to/api/articles?username=elvisans')
+        const response = await fetch(`https://dev.to/api/articles?username=elvisans&per_page=${perPage}&page=${currentPage}`);
         const articles = await response.json()
-        blogs.value = articles.sort((a, b) => new Date(b.published_at) - new Date(a.published_at))
+        blogs.value = [...articles];
+        nextTick(()=>{
+            preloadMore()
+        });
     } catch (error) {
         console.error('Error fetching blogs:', error)
     } finally {
         pending.value = false
     }
 })
+
+
+const preloadMore = async function(){
+    currentPage++;
+    const response = await fetch(`https://dev.to/api/articles?username=elvisans&per_page=${perPage}&page=${currentPage}`);
+    const articles = await response.json();
+    loadingMoreBlog.value = true;
+    if(articles && articles.length > 0){
+        nextBatch.value = [...articles];
+        setTimeout(function(){
+            loadingMoreBlog.value = false;
+        },1000)
+    }
+    else{
+        loadingMoreBlog.value = false;
+        noMoreBlog.value = true;
+        nextBatch.value = [];
+    }
+}
+
+const loadMoreUnder = function(){
+    if(!noMoreBlog.value){
+        blogs.value = [...blogs.value, ...nextBatch.value ];
+        preloadMore();
+    }
+}
 </script> 
