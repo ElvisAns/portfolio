@@ -282,19 +282,29 @@ code:not(code.hljs) {
 
 // Step 3: Main function
 async function main() {
-  const apiUrl = 'https://dev.to/api/articles?username=elvisans';
+  const perPage = 10; // Number of articles per page
+  let page = 1; // Start from the first page
+  const apiUrlBase = 'https://dev.to/api/articles?username=elvisans&per_page=';
+
   const outputDir = join(__dirname, 'pages/blog');
+  let allMetaData = []; // Array to hold all fetched metadata
 
-  console.log('Fetching meta data...');
-  const metaData = await fetchMetaData(apiUrl);
+  while (true) {
+    const apiUrl = `${apiUrlBase}${perPage}&page=${page}`;
+    console.log(`Fetching meta data from: ${apiUrl}`);
+    const metaData = await fetchMetaData(apiUrl);
 
-  if (metaData.length === 0) {
-    console.log('No data found. Exiting.');
-    return;
+    if (metaData.length === 0) {
+      console.log('No more data found. Exiting.');
+      break; // Exit the loop if no more data
+    }
+
+    allMetaData = allMetaData.concat(metaData); // Append new data to the array
+    page++; // Move to the next page
   }
 
   console.log('Generating .vue files...');
-  generateVueFiles(metaData, outputDir);
+  generateVueFiles(allMetaData, outputDir);
 
   console.log('All .vue files generated successfully.');
 }
