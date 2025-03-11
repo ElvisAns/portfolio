@@ -50,7 +50,7 @@ export const useProjectsAndTools = (): { tools: ToolAndProject[], projects: Tool
             shortDescription: "All in tool to help you find remote programming jobs",
             description: "Awesome Careers is a tool that helps you find remote jobs. We aggregate jobs from different sources and help you find the perfect job for you. Plus you have access to AI to help draft your resume and cover letter.",
             link: "https://awesome-careers.com",
-            techStack: ["Nuxt.js", "Gemini API", "Google search API"],
+            techStack: ["Nuxt.js", "Gemini API", "Google search API", "Cloudflare Workers"],
             challenges: ["API integration", "Building a scalable system", "AI integration", "Advanced search queries"],
             date: "2024",
             inProgress: true,
