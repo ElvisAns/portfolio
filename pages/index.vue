@@ -171,6 +171,15 @@
             </div>
         </div>
 
+        <!-- Website Uptime Dashboard Ad -->
+        <InternalAds
+            title="Website Uptime Dashboard – Never Miss a Downtime!"
+            description="Keep your websites running smoothly, protect your SEO, and get instant alerts if your site goes down. Affordable, customizable, and built with Google Sheets & Apps Script. Start monitoring your sites today!"
+            buttonText="Get the Uptime Dashboard"
+            link="https://thecodepreneur.gumroad.com/l/website-uptime-monitor"
+            smallDescription="Monitor your sites • Email & webhook alerts • Public dashboard"
+        />
+
         <!-- Call to Action -->
         <div class="my-[100px] text-center">
             <h2 class="text-3xl font-bold mb-4">Let's Work Together</h2>

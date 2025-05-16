@@ -2,7 +2,13 @@
     <main class="max-w-[1280px] mx-auto px-[20px] mt-[50px] text-black dark:text-white">
         <h1 class="dark:text-white text-primary-500 text-[3rem] md:text-[5rem] font-bold">Projects</h1>
         <p class="dark:text-[#def858] text-primary-500 text-3xl mb-12">Featured projects I have worked on or currently working on.</p>
-
+        <InternalAds
+            title="Website Uptime Dashboard – Never Miss a Downtime!"
+            description="Keep your websites running smoothly, protect your SEO, and get instant alerts if your site goes down. Affordable, customizable, and built with Google Sheets & Apps Script. Start monitoring your sites today!"
+            buttonText="Get the Uptime Dashboard"
+            link="https://thecodepreneur.gumroad.com/l/website-uptime-monitor"
+            smallDescription="Monitor your sites • Email & webhook alerts • Public dashboard"
+        />
         <!-- Projects Grid -->
         <div class="space-y-12">
             <div v-for="project in projects" :key="project.title" 
