@@ -5,7 +5,7 @@ name: Generate Blog Pages
 on:
   schedule:
     - cron: '0 0 * * *' # Runs daily at midnight (adjust as needed) 
-  workflow_dispatch: # Allows manual triggering of the workflow
+  workflow_dispatch: {} # Allows manual triggering of the workflow
 
 jobs:
   generate-blogs:
