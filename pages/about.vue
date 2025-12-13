@@ -29,10 +29,10 @@
                 that have real-world impact.
             </p>
             <p class="text-xl leading-relaxed mb-6">
-                Currently, I'm working with <a href="https://outliant.com" target="_blank"
-                    class="text-primary-500 hover:underline">Outliant</a>, an agency where we help businesses grow
-                through marketing and web development.
-                and I am also a core contributor at
+                Previously, I was working with <a href="https://outliant.com" target="_blank"
+                    class="text-primary-500 hover:underline">Outliant(acquired by Ignite Visibility)</a>, an agency where we helped businesses grow
+                through offering marketing and web development services. This gave me the opportunity to work with a lot of great clients(Like Blend360, Idealdental, Gameday Mens Health, Apollo Theater, etc.) and learn a lot about the digital marketing industry.
+                I am also a core contributor at
                 <a href="https://openhub.net/accounts/ElvisAns" target="_blank"
                     class="text-primary-500 hover:underline">
                     TikiCMS groupware
