@@ -2,12 +2,15 @@ import kvoltslab from '~/assets/images/brands/kvoltslab.png'
 import outliant from '~/assets/images/brands/outliant.jpg'
 import blend360 from '~/assets/images/brands/blend360_logo.jpg'
 import evoludata from '~/assets/images/brands/evoludata.png'
-import myidealdental from '~/assets/images/brands/myidealdental.png'
+import myidealdental from '~/assets/images/brands/myidealdental.jpg'
 import greenrack from '~/assets/images/brands/green_rack_solar_contracting_logo.jpg'
 import premierpharma from '~/assets/images/brands/premier_pharma.svg'
 import apollo from '~/assets/images/brands/appollo.webp'
 import ctlco from '~/assets/images/brands/ctlcosarl.png'
 import groupsupra from '~/assets/images/brands/group_supra.png'
+import axeptio from '~/assets/images/brands/axeptio.png'
+import gamedaymenshealth from '~/assets/images/brands/Gameday_Vector_Logo_-_Black_and_Red.jpg'
+import ignitevisibility from '~/assets/images/brands/Ignite-Logo2.png'
 
 export const useBrands = () => {
     const brands = [
@@ -69,6 +72,24 @@ export const useBrands = () => {
             name: "Group Supra",
             url: "https://groupesupra.com",
             image: groupsupra,
+            whiteBg: false
+        },
+        {
+            name: 'Axeptio',
+            url: 'https://www.axept.io/',
+            image: axeptio,
+            whiteBg: false
+        },
+        {
+            name: 'Gameday Mens Health',
+            url: 'https://gamedaymenshealth.com',
+            image: gamedaymenshealth,
+            whiteBg: false
+        },
+        {
+            name: 'Ignite Visibility',
+            url: 'https://ignitevisibility.com',
+            image: ignitevisibility,
             whiteBg: false
         }
     ]
