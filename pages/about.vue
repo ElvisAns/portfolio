@@ -156,7 +156,7 @@ const timeline = [
     {
         year: '2021',
         title: 'Entrepreneurial Venture',
-        description: 'Founded <a class="text-primary-500 underline" href="https://kvolts-lab.com">Kilo Volts Lab</a>, a startup dedicated to solving African challenges through technology. Our flagship product: <a class="text-primary-500 underline" href="https://gethealth-link.com">HealthLink</a>.'
+        description: 'Founded <a class="text-primary-500 underline" href="https://kvolts-lab.com">Kilo Volts Lab</a>, a startup dedicated to solving African challenges through technology. Our flagship product: <a class="text-primary-500 underline" href="https://gethealth.link">HealthLink</a>.'
     },
     {
         year: '2022',

@@ -137,7 +137,7 @@ export const useProjectsAndTools = (): { tools: ToolAndProject[], projects: Tool
             title: 'HealthLink',
             shortDescription: 'QR code health bracelets',
             description: 'HealthLink is a medical bracelet with a QR code that allows healthcare professionals to quickly and securely access your information. No matter where you are, your data is protected and available when needed, especially in an emergency.',
-            link: 'https://gethealth-link.com',
+            link: 'https://gethealth.link',
             techStack: ['PHP/Laravel', 'Inertia.js', 'Vuejs'],
             challenges: [
                 'API integration',
