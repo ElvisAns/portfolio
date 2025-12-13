@@ -15,7 +15,7 @@
                 </UButton>
             </div>
             <div class="relative">
-                <img src="~/assets/images/me.jpg" alt="Elvis at work" class="rounded-2xl shadow-xl w-full h-auto" />
+                <img src="~/assets/images/event-pitching-healthlink.jpg" alt="Elvis at work" class="rounded-2xl shadow-xl w-full h-auto" />
                 <!-- Decorative elements -->
                 <div class="absolute -right-4 bg-primary-500/20 w-[100%] h-full rounded-2xl -z-10 bottom-6"></div>
             </div>
@@ -172,6 +172,21 @@ const timeline = [
         year: '2024',
         title: 'Continuing the Journey',
         description: 'Thriving at Outliant and eagerly anticipating new challenges and growth opportunities.'
+    },
+    {
+        year : 'Jan 2025',
+        title : "Kilo Volts Lab get supported by Orange Corners",
+        description : "Kilo Volts Lab get supported by Orange Corners, a startup accelerator program."
+    },
+    {
+        year: 'Mid-2025',
+        title: 'Outliant get acquired by Ignite Visibility',
+        description: 'Outliant get acquired by Ignite Visibility, a digital marketing agency.'
+    },
+    {
+        year: 'December 2025',
+        title: 'My journey at Outliant comes to an end',
+        description: 'My journey at Outliant comes to an end. I have learned a lot and I am grateful for the opportunity to work with such a great team. I am looking forward to the next chapter of my career.'
     }
 ];
 
