@@ -8,7 +8,6 @@
             and other brands, and payment and biometric systems for transport and HR.
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] mb-[50px] max-w-[700px]">
-            <div class="flex items-center gap-3"><i class="fa-solid fa-download text-3xl"></i> 200+ installs for Website Importer</div>
             <div class="flex items-center gap-3"><i class="fa-solid fa-globe text-3xl"></i> 100+ websites moved into Webflow</div>
         </div>
         <div
