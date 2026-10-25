@@ -4,12 +4,12 @@
         </h1>
         <p class="dark:text-[#def858] text-primary-500 text-4xl">Senior Full-Stack Engineer</p>
         <p class="mt-[56px] text-[1.5rem] max-w-[700px] mb-[40px]">
-            I take products from a rough problem to production—building the interface, API, data layer, and deployment.
-            Six years shipping web platforms with Laravel, Vue, Nuxt, and Cloudflare.
+            At 8Limbs, I replaced a Lovable-generated app with a codebase the company owns. Then I shipped food and
+            fridge scanners, daily nutrition tracking, Stripe subscriptions, and a move to Cloudflare Workers.
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] mb-[50px] max-w-[700px]">
-            <div class="flex items-center gap-3"><i class="fa-solid fa-download text-3xl"></i> 200+ installs on the Webflow Marketplace</div>
-            <div class="flex items-center gap-3"><i class="fa-solid fa-globe text-3xl"></i> 100+ sites migrated with Website Importer</div>
+            <div class="flex items-center gap-3"><i class="fa-solid fa-download text-3xl"></i> 200+ installs for Website Importer</div>
+            <div class="flex items-center gap-3"><i class="fa-solid fa-globe text-3xl"></i> 100+ websites moved into Webflow</div>
         </div>
         <div
             class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] mb-[100px] border-2 border-primary-500/20 rounded-xl p-6 dark:bg-gray-900/50 bg-white backdrop-blur-sm relative electric-border">
@@ -17,12 +17,13 @@
                 <img src="~/assets/images/me.jpg" alt="Ansima Elvis"
                     class="w-auto h-[80px] rounded-full inline-block float-left" />
                 <p class="text-black dark:text-white text-2xl md:text-3xl lg:text-5xl"><span
-                        class="dark:text-[#def858] text-primary-500">I build software</span> teams can run and maintain</p>
+                        class="dark:text-[#def858] text-primary-500">I work across</span> the app, the API, and production</p>
             </div>
             <div class="text-black dark:text-white text-lg md:text-2xl mt-[20px]">
-                <p>I work across the stack, from frontend and APIs to data, deployment, and production support.</p>
-                <p>I have replaced prototypes with maintainable applications, improved existing platforms, and shipped
-                    products used by real customers.</p>
+                <p>My day-to-day tools are Laravel, Vue, Nuxt, and Cloudflare. I’ve also built React integrations,
+                    Stripe payments, and software that talks to QR cards, NFC tags, and biometric readers.</p>
+                <p>Before 8Limbs, I helped ship websites for Apollo Theater and other client teams, built a Webflow
+                    migration tool, and worked on bus payments and biometric attendance systems.</p>
                 <div class="flex items-center gap-4 mt-[20px] dark:text-[#def858] text-primary-500 text-3xl relative pb-[20px] flex-wrap">
                     <a href="https://www.linkedin.com/in/cibalinda-elvis/" target="_blank" rel="noopener noreferrer"><i
                             class="fa-brands fa-linkedin"></i></a>

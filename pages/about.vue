@@ -7,7 +7,7 @@
                     Senior Full-Stack Engineer
                 </h1>
                 <p class="text-xl text-gray-600 dark:text-gray-300">
-                    I take web products from a rough problem to production, and build systems teams can own.
+                    At 8Limbs, I replaced a generated app with a codebase the company owns—and shipped the features around it.
                 </p>
                 <UButton class="mt-4" to="mailto:ansimapersic@gmail.com" size="lg">
                     <UIcon name="i-heroicons-envelope" class="w-4 h-4 mr-2" />
@@ -24,26 +24,26 @@
         <!-- Introduction -->
         <div class="prose dark:prose-invert max-w-none mb-20">
             <p class="text-xl leading-relaxed mb-6">
-                I'm Ansima, a full-stack engineer based in Kigali, Rwanda. For six years, I've shipped web products
-                across frontend, backend, data, and deployment, primarily with Laravel, Vue, Nuxt, and Cloudflare.
-                I can take over an existing prototype, make it reliable, and leave behind a codebase a team can maintain.
+                I'm Ansima, a full-stack engineer in Kigali. Most recently, I took over 8Limbs’ Lovable-generated
+                fight-club app and replaced it with a codebase the company owns. I also built a food scanner, a fridge
+                scanner, and daily intake tracking, then moved its serverless functions to Cloudflare Workers and
+                added Stripe subscriptions and webhooks.
             </p>
             <p class="text-xl leading-relaxed mb-6">
-                My recent work includes replacing a generated app with a codebase a company owns, building AI-assisted
-                nutrition tools, moving serverless workloads to Cloudflare Workers, and integrating Stripe.
-                I also shipped Website Importer on the Webflow Marketplace; it has more than 200 installs and has
-                migrated over 100 sites.
+                At Kilo Volts Lab, I shipped Website Importer on the Webflow Marketplace. It charges per import through
+                Stripe and has been installed over 200 times; more than 100 websites have been migrated. I also lead
+                HealthLink, a QR/NFC bracelet and card that links to a secure health profile, with medication reminders
+                sent over WhatsApp.
             </p>
             <p class="text-xl leading-relaxed mb-6">
-                I have shipped production websites for Apollo Theater, Blend360, Ideal Dental, and Gameday Men's Health
-                with <a href="https://outliant.com" target="_blank"
-                    class="text-primary-500 hover:underline">Outliant and Ignite Visibility</a>.
-                I contribute to
+                Earlier, at CTLCo, I built Vantoria’s biometric attendance system and led Atalaku Xpress, a bus-fare
+                platform with rechargeable cards and mobile-money and bank payments. I also make regular contributions to
                 <a href="https://openhub.net/accounts/ElvisAns" target="_blank"
                     class="text-primary-500 hover:underline">
                     TikiCMS groupware
                 </a>,
-                where I build maintainer tools and improve reliability and performance.
+                including maintainer tools and Tiki IoT dashboards. At Outliant and Ignite Visibility, I worked on
+                production sites for Apollo Theater, Blend360, Ideal Dental, and Gameday Men’s Health.
             </p>
 
             <!-- Added Achievement Image -->
@@ -68,30 +68,30 @@
         <InternalAds />
         <!-- Principles -->
         <div class="mb-20">
-            <h2 class="text-3xl font-bold mb-8">How I Work</h2>
+            <h2 class="text-3xl font-bold mb-8">A few things I’ve built</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="dark:bg-gray-800 bg-white backdrop-blur-sm p-6 rounded-xl border border-gray-800">
                     <i class="fas fa-bullseye text-primary-500 text-2xl mb-5" aria-hidden="true"></i>
-                    <span class="sr-only">Start with the problem</span>
-                    <h3 class="text-xl font-semibold mb-3">Start with the problem</h3>
+                    <span class="sr-only">HealthLink</span>
+                    <h3 class="text-xl font-semibold mb-3">HealthLink</h3>
                     <p class="text-gray-400">
-                        Understand what users need, then ship the smallest useful solution.
+                        A QR/NFC card or bracelet opens a person’s secure health profile. Built with Laravel, Vue, and Cloudflare.
                     </p>
                 </div>
                 <div class="dark:bg-gray-800 bg-white backdrop-blur-sm p-6 rounded-xl border border-gray-800">
                     <i class="fas fa-check text-primary-500 text-2xl mb-5" aria-hidden="true"></i>
-                    <span class="sr-only">Build for the team</span>
-                    <h3 class="text-xl font-semibold mb-3">Build for the team</h3>
+                    <span class="sr-only">Website Importer</span>
+                    <h3 class="text-xl font-semibold mb-3">Website Importer</h3>
                     <p class="text-gray-400">
-                        Choose straightforward tools and leave code that other engineers can understand and maintain.
+                        A Webflow Marketplace app for migrating sites from other platforms. 200+ installs; 100+ sites migrated.
                     </p>
                 </div>
                 <div class="dark:bg-gray-800 bg-white backdrop-blur-sm p-6 rounded-xl border border-gray-800">
                     <i class="fas fa-expand-arrows-alt text-primary-500 text-2xl mb-5" aria-hidden="true"></i>
-                    <span class="sr-only">Own production</span>
-                    <h3 class="text-xl font-semibold mb-3">Own production</h3>
+                    <span class="sr-only">Atalaku Xpress</span>
+                    <h3 class="text-xl font-semibold mb-3">Atalaku Xpress</h3>
                     <p class="text-gray-400">
-                        Take responsibility for deployment, reliability, and what happens after launch.
+                        Bus fares with rechargeable cards, QR payments, and mobile-money and bank integrations.
                     </p>
                 </div>
             </div>
