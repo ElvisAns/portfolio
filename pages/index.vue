@@ -1,12 +1,12 @@
 <template>
     <main class="max-w-[1280px] mx-auto px-[20px] mt-[50px] text-black dark:text-white">
         <h1 class="dark:text-white text-primary-500 text-[3rem] md:text-[5rem] lg:text-[6rem] font-bold">I build software that works in the real world.</h1>
-        <p class="dark:text-[#def858] text-primary-500 text-4xl">I’m Ansima Elvis, a Senior Full-Stack Engineer</p>
+        <p class="dark:text-[#def858] text-primary-500 text-4xl">I’m Ansima Elvis</p>
         <p class="mt-[56px] text-[1.5rem] max-w-[700px] mb-[20px]">
-            who turns complex ideas into production-ready web applications, integrations, and connected systems.
+            I build production-ready web applications, integrations, and connected systems that solve real operational problems.
         </p>
         <p class="mt-[10px] text-[1.25rem] max-w-[700px] mb-[20px] text-gray-600 dark:text-gray-300">
-            From building a Webflow Marketplace tool that has migrated 100+ websites to delivering payment integrations and biometric systems, I work across the stack to solve real engineering problems.
+            From building a Webflow Marketplace tool that has migrated 100+ websites to delivering payment integrations and biometric systems, I work across the stack to turn complex ideas into reliable software.
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] mb-[50px] max-w-[700px]">
             <div class="flex items-center gap-3"><i class="fa-solid fa-globe text-3xl"></i> 100+ websites migrated to Webflow</div>
@@ -42,7 +42,7 @@
             </div>
         </div>
         <div class="mb-[100px]">
-            <h2 class="text-3xl font-bold text-center mb-8">How I work</h2>
+            <h2 class="text-3xl font-bold text-center mb-8">Engineering beyond the interface</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-[20px]">
                 <div class="dark:bg-gray-900/50 bg-white p-6 rounded-xl border border-gray-800">
                     <p class="text-sm uppercase tracking-[0.2em] text-primary-500 mb-3">Independent products</p>
@@ -51,13 +51,13 @@
                 </div>
                 <div class="dark:bg-gray-900/50 bg-white p-6 rounded-xl border border-gray-800">
                     <p class="text-sm uppercase tracking-[0.2em] text-primary-500 mb-3">Product delivery</p>
-                    <h3 class="text-xl font-semibold mb-3">Owned the engineering work</h3>
-                    <p class="text-gray-400">My work includes platform architecture, API design, payment flows, connected device integrations, and production-ready frontend and backend systems.</p>
+                    <h3 class="text-xl font-semibold mb-3">From frontend to infrastructure</h3>
+                    <p class="text-gray-400">I build across the software stack—from intuitive frontends and robust APIs to databases, integrations, deployment, and production infrastructure.</p>
                 </div>
                 <div class="dark:bg-gray-900/50 bg-white p-6 rounded-xl border border-gray-800">
                     <p class="text-sm uppercase tracking-[0.2em] text-primary-500 mb-3">Team contribution</p>
-                    <h3 class="text-xl font-semibold mb-3">Built with client and product teams</h3>
-                    <p class="text-gray-400">I’ve contributed to client-facing delivery for Apollo Theater and other teams, shipping production websites and technical solutions alongside cross-functional partners.</p>
+                    <h3 class="text-xl font-semibold mb-3">Real client and product work</h3>
+                    <p class="text-gray-400">I’ve contributed to projects involving Apollo Theater and other client teams, shipping production websites and technical systems alongside cross-functional partners.</p>
                 </div>
             </div>
         </div>
@@ -84,16 +84,6 @@
                     </div>
                 </a>
             </div>
-        </div>
-        <div class="flex justify-center items-center my-[100px]">
-            <blockquote class="text-xl italic font-semibold text-gray-900 dark:text-white">
-                <svg class="w-8 h-8 text-gray-400 dark:text-gray-600 mb-4" aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
-                    <path
-                        d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
-                </svg>
-                <p>"A ship in harbor is safe, but that is not what ships are built for."</p>
-            </blockquote>
         </div>
         <div class="flex flex-col justify-center items-center my-[100px]">
             <div class="flex justify-between items-center w-full">
