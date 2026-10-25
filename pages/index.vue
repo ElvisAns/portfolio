@@ -4,8 +4,8 @@
         </h1>
         <p class="dark:text-[#def858] text-primary-500 text-4xl">Senior Full-Stack Engineer</p>
         <p class="mt-[56px] text-[1.5rem] max-w-[700px] mb-[40px]">
-            At 8Limbs, I replaced a Lovable-generated app with a codebase the company owns. Then I shipped food and
-            fridge scanners, daily nutrition tracking, Stripe subscriptions, and a move to Cloudflare Workers.
+            I’ve shipped a Webflow Marketplace tool that migrated 100+ sites, production websites for Apollo Theater
+            and other brands, and payment and biometric systems for transport and HR.
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] mb-[50px] max-w-[700px]">
             <div class="flex items-center gap-3"><i class="fa-solid fa-download text-3xl"></i> 200+ installs for Website Importer</div>
