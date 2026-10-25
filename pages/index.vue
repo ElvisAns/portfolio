@@ -1,11 +1,16 @@
 <template>
     <main class="max-w-[1280px] mx-auto px-[20px] mt-[50px] text-black dark:text-white">
-        <h1 class="dark:text-white text-primary-500 text-[3rem] md:text-[5rem] lg:text-[6rem] font-bold">Ansima Elvis
+        <h1 class="dark:text-white text-primary-500 text-[3rem] md:text-[5rem] lg:text-[6rem] font-bold">I build software that works in the real world.
         </h1>
-        <p class="dark:text-[#def858] text-primary-500 text-4xl">Senior Full-Stack Engineer</p>
+        <p class="dark:text-[#def858] text-primary-500 text-4xl">Ansima Elvis — Senior Full-Stack Engineer</p>
         <p class="mt-[56px] text-[1.5rem] max-w-[700px] mb-[40px]">
-            I’ve shipped a Webflow Marketplace tool that migrated 100+ sites, production websites for Apollo Theater
-            and other brands, and payment and biometric systems for transport and HR.
+            I'm Ansima Elvis, a Senior Full-Stack Engineer who turns complex ideas into production-ready web applications, integrations, and connected systems.
+        </p>
+        <p class="mt-[10px] text-[1.25rem] max-w-[700px] mb-[20px] text-gray-600 dark:text-gray-300">
+            From building a Webflow Marketplace product for website migration to delivering production websites for Apollo Theater and other brands, payment integrations, and biometric systems, I work across the stack to solve real engineering problems.
+        </p>
+        <p class="mt-[10px] text-[1.25rem] max-w-[700px] mb-[40px] text-gray-600 dark:text-gray-300">
+            I work across the stack—from application architecture and backend logic to frontend experiences, external integrations, and production infrastructure.
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] mb-[50px] max-w-[700px]">
             <div class="flex items-center gap-3"><i class="fa-solid fa-globe text-3xl"></i> 100+ websites moved into Webflow</div>
@@ -16,13 +21,11 @@
                 <img src="~/assets/images/me.jpg" alt="Ansima Elvis"
                     class="w-auto h-[80px] rounded-full inline-block float-left" />
                 <p class="text-black dark:text-white text-2xl md:text-3xl lg:text-5xl"><span
-                        class="dark:text-[#def858] text-primary-500">I work across</span> the app, the API, and production</p>
+                        class="dark:text-[#def858] text-primary-500">I work across</span> the application, the API, and production infrastructure</p>
             </div>
             <div class="text-black dark:text-white text-lg md:text-2xl mt-[20px]">
-                <p>My day-to-day tools are Laravel, Vue, Nuxt, and Cloudflare. I’ve also built React integrations,
-                    Stripe payments, and software that talks to QR cards, NFC tags, and biometric readers.</p>
-                <p>Before 8Limbs, I helped ship websites for Apollo Theater and other client teams, built a Webflow
-                    migration tool, and worked on bus payments and biometric attendance systems.</p>
+                <p>From application architecture and backend logic to frontend experiences, external integrations, and live production systems, I build software that is designed to work in the real world.</p>
+                <p>My work spans Webflow migration products, payment flows, biometric systems, and production websites for brand and client teams that need dependable delivery.</p>
                 <div class="flex items-center gap-4 mt-[20px] dark:text-[#def858] text-primary-500 text-3xl relative pb-[20px] flex-wrap">
                     <a href="https://www.linkedin.com/in/cibalinda-elvis/" target="_blank" rel="noopener noreferrer"><i
                             class="fa-brands fa-linkedin"></i></a>
@@ -45,8 +48,8 @@
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-[20px]">
                 <!-- Brand Cards -->
                 <a v-for="brand in brands" :key="brand.url" :href="brand.url" target="_blank" class="group relative dark:bg-gray-900/50 bg-white p-6 rounded-xl backdrop-blur-sm border border-gray-800 
-                           hover:bg-gray-800/70 transition-all duration-300 
-                           flex items-center justify-center">
+                            hover:bg-gray-800/70 transition-all duration-300 
+                            flex items-center justify-center">
                     <img :src="brand.image" :alt="brand.name" :title="brand.name" :class="[
                         'w-auto h-[40px] rounded-md transition-all duration-300 group-hover:scale-110 object-contain',
                         brand.whiteBg ? 'bg-white p-2' : '',
@@ -80,6 +83,9 @@
                 <h2 class="text-3xl font-bold text-center mb-8">Recent Articles</h2>
                 <NuxtLink to="/blog" class="text-primary-500 underline"><UButton size="lg">View All <i class="fas fa-arrow-right"></i></UButton></NuxtLink>
             </div>
+            <p class="text-gray-400 mb-8 max-w-3xl text-center">
+                Writing on product engineering, practical software decisions, and the systems behind real-world digital experiences.
+            </p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
                 <!-- Loading State -->
                 <template v-if="pending">
@@ -135,6 +141,9 @@
         <!-- Tech Stack Section -->
         <div class="my-[100px]">
             <h2 class="text-3xl font-bold text-center mb-8">Technologies I Work With</h2>
+            <p class="text-gray-400 text-center max-w-3xl mx-auto mb-8">
+                A practical stack for product delivery: backend services, frontend interfaces, API integrations, and the systems that keep them running reliably.
+            </p>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
                 <div v-for="tech in techStack" :key="tech.name"
                     class="group flex flex-col items-center p-4 dark:bg-gray-900/50 bg-white rounded-xl backdrop-blur-sm border border-gray-800 hover:border-primary-500/50 transition-all">
@@ -177,9 +186,9 @@
 
         <!-- Call to Action -->
         <div class="my-[100px] text-center">
-            <h2 class="text-3xl font-bold mb-4">Let's Work Together</h2>
+            <h2 class="text-3xl font-bold mb-4">Let’s talk about the next build</h2>
             <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
-                Have a project in mind? I'm always open to discussing new opportunities and ideas.
+                I’m available for senior remote engineering opportunities, product collaborations, and technical consulting work involving web applications, integrations, and systems that need to function reliably in production.
             </p>
             <div class="flex justify-center gap-4">
                 <a href="mailto:ansimapersic@gmail.com"
@@ -190,7 +199,7 @@
                 <NuxtLink to="/projects"
                     class="border border-primary-500 text-primary-500 px-6 py-3 rounded-full hover:bg-primary-500 hover:text-white transition-colors">
                     <i class="fas fa-folder-open mr-2"></i>
-                    View Projects
+                    Explore My Projects
                 </NuxtLink>
             </div>
         </div>

@@ -7,7 +7,7 @@
                     Senior Full-Stack Engineer
                 </h1>
                 <p class="text-xl text-gray-600 dark:text-gray-300">
-                    Over six years, I've built and shipped web products across the stack—from client websites and payment systems to health and SaaS products.
+                    I build practical software that connects application logic, APIs, integrations, and systems that operate in the real world.
                 </p>
                 <UButton class="mt-4" to="mailto:ansimapersic@gmail.com" size="lg">
                     <UIcon name="i-heroicons-envelope" class="w-4 h-4 mr-2" />
@@ -24,26 +24,19 @@
         <!-- Introduction -->
         <div class="prose dark:prose-invert max-w-none mb-20">
             <p class="text-xl leading-relaxed mb-6">
-                I'm Ansima, a full-stack engineer in Kigali. Most recently, I took over 8Limbs’ Lovable-generated
-                fight-club app and replaced it with a codebase the company owns. I also built a food scanner, a fridge
-                scanner, and daily intake tracking, then moved its serverless functions to Cloudflare Workers and
-                added Stripe subscriptions and webhooks.
+                I'm Ansima Elvis, a full-stack engineer and entrepreneur focused on building practical software that works in production.
             </p>
             <p class="text-xl leading-relaxed mb-6">
-                At Kilo Volts Lab, I shipped Website Importer on the Webflow Marketplace. It charges per import through
-                Stripe and has been installed over 200 times; more than 100 websites have been migrated. I also lead
-                HealthLink, a QR/NFC bracelet and card that links to a secure health profile, with medication reminders
-                sent over WhatsApp.
+                My work spans web applications, APIs, integrations, and systems that connect software to the physical world. I've built a Webflow Marketplace product for website migration, contributed to production websites for Apollo Theater and other client teams, and worked on payment and biometric systems.
             </p>
             <p class="text-xl leading-relaxed mb-6">
-                Earlier, at CTLCo, I built Vantoria’s biometric attendance system and led Atalaku Xpress, a bus-fare
-                platform with rechargeable cards and mobile-money and bank payments. I also make regular contributions to
-                <a href="https://openhub.net/accounts/ElvisAns" target="_blank"
-                    class="text-primary-500 hover:underline">
-                    TikiCMS groupware
-                </a>,
-                including maintainer tools and Tiki IoT dashboards. At Outliant and Ignite Visibility, I worked on
-                production sites for Apollo Theater, Blend360, Ideal Dental, and Gameday Men’s Health.
+                My technical experience includes Laravel, Vue.js, Nuxt, JavaScript, SQL, React integrations, Stripe payments, and technologies such as QR codes, NFC, and biometric readers.
+            </p>
+            <p class="text-xl leading-relaxed mb-6">
+                I enjoy engineering challenges that require understanding how different parts of a system fit together—from the user interface and backend logic to external services, infrastructure, and connected devices.
+            </p>
+            <p class="text-xl leading-relaxed mb-6">
+                I value practical problem-solving, sound technical decisions, and software that addresses real needs. I'm interested in contributing to strong engineering teams, building useful products, and collaborating with clients who need reliable technical solutions.
             </p>
 
             <!-- Added Achievement Image -->
@@ -128,8 +121,8 @@
 
         <!-- CTA -->
         <div class="text-center mb-20">
-            <h2 class="text-3xl font-bold mb-4">Interested in working together?</h2>
-            <p class="text-gray-400 mb-4">I'm open to senior full-stack engineering roles and contract work.</p>
+            <h2 class="text-3xl font-bold mb-4">Let’s talk about the next build</h2>
+            <p class="text-gray-400 mb-4">I’m open to senior remote engineering roles, product work, and technical consulting with teams or clients building dependable software.</p>
             <UButton class="mt-4" to="mailto:ansimapersic@gmail.com" size="lg">
                 <UIcon name="i-heroicons-envelope" class="w-4 h-4 mr-2" />
                 Get in touch
