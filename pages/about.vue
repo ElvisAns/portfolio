@@ -191,7 +191,7 @@ const timeline = [
 useHead({
     title: 'About Me | Ansima Elvis',
     meta: [
-        { name: 'description', content: 'Senior full-stack engineer in Kigali, Rwanda. Six years building and maintaining production web products with Laravel, Vue, Nuxt, and Cloudflare.' }
+        { name: 'description', content: 'Ansima Elvis is a full-stack engineer in Kigali. His work includes a Webflow migration app with 200+ installs, a QR/NFC health profile, and production web platforms.' }
     ]
 })
 </script>

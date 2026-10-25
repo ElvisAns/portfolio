@@ -211,7 +211,7 @@ const { tools, projects } = useProjectsAndTools()
 const { setSeo } = useSeo()
 setSeo({
     title: 'Home | Ansima Elvis - Senior Full-Stack Engineer',
-    description: 'Senior full-stack engineer in Kigali, Rwanda. Six years shipping production web platforms with Laravel, Vue, Nuxt, and Cloudflare.',
+    description: 'Ansima Elvis replaced a generated app with a company-owned codebase, shipped a Webflow migration app with 200+ installs, and builds with Laravel, Vue, and Cloudflare.',
 })
 
 let blogs = ref([]);
