@@ -42,6 +42,26 @@
             </div>
         </div>
         <div class="mb-[100px]">
+            <h2 class="text-3xl font-bold text-center mb-8">How I work</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-[20px]">
+                <div class="dark:bg-gray-900/50 bg-white p-6 rounded-xl border border-gray-800">
+                    <p class="text-sm uppercase tracking-[0.2em] text-primary-500 mb-3">Independent products</p>
+                    <h3 class="text-xl font-semibold mb-3">Built from idea to launch</h3>
+                    <p class="text-gray-400">I’ve created product-focused tools and systems with my own direction, including Website Importer and other software that required end-to-end delivery.</p>
+                </div>
+                <div class="dark:bg-gray-900/50 bg-white p-6 rounded-xl border border-gray-800">
+                    <p class="text-sm uppercase tracking-[0.2em] text-primary-500 mb-3">Product delivery</p>
+                    <h3 class="text-xl font-semibold mb-3">Owned the engineering work</h3>
+                    <p class="text-gray-400">My work includes platform architecture, API design, payment flows, connected device integrations, and production-ready frontend and backend systems.</p>
+                </div>
+                <div class="dark:bg-gray-900/50 bg-white p-6 rounded-xl border border-gray-800">
+                    <p class="text-sm uppercase tracking-[0.2em] text-primary-500 mb-3">Team contribution</p>
+                    <h3 class="text-xl font-semibold mb-3">Built with client and product teams</h3>
+                    <p class="text-gray-400">I’ve contributed to client-facing delivery for Apollo Theater and other teams, shipping production websites and technical solutions alongside cross-functional partners.</p>
+                </div>
+            </div>
+        </div>
+        <div class="mb-[100px]">
             <h2 class="text-3xl font-bold text-center">Companies I have worked with </h2>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-[20px]">
                 <!-- Brand Cards -->
@@ -75,16 +95,15 @@
                 <p>"A ship in harbor is safe, but that is not what ships are built for."</p>
             </blockquote>
         </div>
-        <InternalAds />
         <div class="flex flex-col justify-center items-center my-[100px]">
             <div class="flex justify-between items-center w-full">
                 <h2 class="text-3xl font-bold text-center mb-8">Recent Articles</h2>
                 <NuxtLink to="/blog" class="text-primary-500 underline"><UButton size="lg">View All <i class="fas fa-arrow-right"></i></UButton></NuxtLink>
             </div>
             <p class="text-gray-400 mb-8 max-w-3xl text-center">
-                Writing on product engineering, practical software decisions, and the systems behind real-world digital experiences.
+                Writing on practical engineering decisions, product thinking, and the systems behind real-world digital experiences.
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
                 <!-- Loading State -->
                 <template v-if="pending">
                     <UCard v-for="n in 3" :key="n" class="animate-pulse">
@@ -138,17 +157,11 @@
 
         <!-- Tech Stack Section -->
         <div class="my-[100px]">
-            <h2 class="text-3xl font-bold text-center mb-8">Technologies I Work With</h2>
-            <p class="text-gray-400 text-center max-w-3xl mx-auto mb-8">
-                A practical stack for product delivery: backend services, frontend interfaces, API integrations, and the systems that keep them running reliably.
-            </p>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                <div v-for="tech in techStack" :key="tech.name"
-                    class="group flex flex-col items-center p-4 dark:bg-gray-900/50 bg-white rounded-xl backdrop-blur-sm border border-gray-800 hover:border-primary-500/50 transition-all">
-                    <i v-if="!tech.image" :class="[tech.icon, 'text-4xl mb-2 group-hover:text-primary-500']"></i>
-                    <img v-else :src="tech.image" :alt="tech.name" class="w-auto h-[40px] mb-2 group-hover:scale-110 transition-all">
-                    <span class="text-sm text-gray-400">{{ tech.name }}</span>
-                </div>
+            <h2 class="text-3xl font-bold text-center mb-8">Core stack</h2>
+            <div class="flex flex-wrap justify-center gap-3">
+                <span v-for="tech in techStack" :key="tech.name" class="px-4 py-2 rounded-full border border-primary-500/30 bg-white dark:bg-gray-900/50 text-sm text-gray-700 dark:text-gray-200">
+                    {{ tech.name }}
+                </span>
             </div>
         </div>
 
@@ -172,15 +185,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Website Uptime Dashboard Ad -->
-        <InternalAds
-            title="Website Uptime Dashboard – Never Miss a Downtime!"
-            description="Keep your websites running smoothly, protect your SEO, and get instant alerts if your site goes down. Affordable, customizable, and built with Google Sheets & Apps Script. Start monitoring your sites today!"
-            buttonText="Get the Uptime Dashboard"
-            link="https://thecodepreneur.gumroad.com/l/website-uptime-monitor"
-            smallDescription="Monitor your sites • Email & webhook alerts • Public dashboard"
-        />
 
         <!-- Call to Action -->
         <div class="my-[100px] text-center">
