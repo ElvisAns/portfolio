@@ -1,19 +1,17 @@
 <template>
     <main class="max-w-[1280px] mx-auto px-[20px] mt-[50px] text-black dark:text-white">
-        <h1 class="dark:text-white text-primary-500 text-[3rem] md:text-[5rem] lg:text-[6rem] font-bold">I build software that works in the real world.
-        </h1>
-        <p class="dark:text-[#def858] text-primary-500 text-4xl">Ansima Elvis — Senior Full-Stack Engineer</p>
-        <p class="mt-[56px] text-[1.5rem] max-w-[700px] mb-[40px]">
-            I'm Ansima Elvis, a Senior Full-Stack Engineer who turns complex ideas into production-ready web applications, integrations, and connected systems.
+        <h1 class="dark:text-white text-primary-500 text-[3rem] md:text-[5rem] lg:text-[6rem] font-bold">I build software that works in the real world.</h1>
+        <p class="dark:text-[#def858] text-primary-500 text-4xl">I’m Ansima Elvis, a Senior Full-Stack Engineer</p>
+        <p class="mt-[56px] text-[1.5rem] max-w-[700px] mb-[20px]">
+            who turns complex ideas into production-ready web applications, integrations, and connected systems.
         </p>
         <p class="mt-[10px] text-[1.25rem] max-w-[700px] mb-[20px] text-gray-600 dark:text-gray-300">
-            From building a Webflow Marketplace product for website migration to delivering production websites for Apollo Theater and other brands, payment integrations, and biometric systems, I work across the stack to solve real engineering problems.
-        </p>
-        <p class="mt-[10px] text-[1.25rem] max-w-[700px] mb-[40px] text-gray-600 dark:text-gray-300">
-            I work across the stack—from application architecture and backend logic to frontend experiences, external integrations, and production infrastructure.
+            From building a Webflow Marketplace tool that has migrated 100+ websites to delivering payment integrations and biometric systems, I work across the stack to solve real engineering problems.
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] mb-[50px] max-w-[700px]">
-            <div class="flex items-center gap-3"><i class="fa-solid fa-globe text-3xl"></i> 100+ websites moved into Webflow</div>
+            <div class="flex items-center gap-3"><i class="fa-solid fa-globe text-3xl"></i> 100+ websites migrated to Webflow</div>
+            <div class="flex items-center gap-3"><i class="fa-solid fa-code text-3xl"></i> Full-stack from application to production</div>
+            <div class="flex items-center gap-3"><i class="fa-solid fa-microchip text-3xl"></i> Web + IoT software connected to the physical world</div>
         </div>
         <div
             class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] mb-[100px] border-2 border-primary-500/20 rounded-xl p-6 dark:bg-gray-900/50 bg-white backdrop-blur-sm relative electric-border">
@@ -21,11 +19,11 @@
                 <img src="~/assets/images/me.jpg" alt="Ansima Elvis"
                     class="w-auto h-[80px] rounded-full inline-block float-left" />
                 <p class="text-black dark:text-white text-2xl md:text-3xl lg:text-5xl"><span
-                        class="dark:text-[#def858] text-primary-500">I work across</span> the application, the API, and production infrastructure</p>
+                        class="dark:text-[#def858] text-primary-500">I work across</span> the app, the API, and production</p>
             </div>
             <div class="text-black dark:text-white text-lg md:text-2xl mt-[20px]">
-                <p>From application architecture and backend logic to frontend experiences, external integrations, and live production systems, I build software that is designed to work in the real world.</p>
-                <p>My work spans Webflow migration products, payment flows, biometric systems, and production websites for brand and client teams that need dependable delivery.</p>
+                <p>My day-to-day work spans application architecture, backend logic, frontend experiences, external integrations, and production infrastructure.</p>
+                <p>I build and ship reliable software for Webflow migration tools, payment systems, biometric workflows, and production websites that need to work in the real world.</p>
                 <div class="flex items-center gap-4 mt-[20px] dark:text-[#def858] text-primary-500 text-3xl relative pb-[20px] flex-wrap">
                     <a href="https://www.linkedin.com/in/cibalinda-elvis/" target="_blank" rel="noopener noreferrer"><i
                             class="fa-brands fa-linkedin"></i></a>
@@ -194,12 +192,12 @@
                 <a href="mailto:ansimapersic@gmail.com"
                     class="bg-primary-500 text-white px-6 py-3 rounded-full hover:bg-primary-600 transition-colors">
                     <i class="fas fa-envelope mr-2"></i>
-                    Get in Touch
+                    Let’s Talk
                 </a>
                 <NuxtLink to="/projects"
                     class="border border-primary-500 text-primary-500 px-6 py-3 rounded-full hover:bg-primary-500 hover:text-white transition-colors">
                     <i class="fas fa-folder-open mr-2"></i>
-                    Explore My Projects
+                    View My Projects
                 </NuxtLink>
             </div>
         </div>
