@@ -156,7 +156,7 @@ const timeline = [
         description: 'Developed an attendance system that combined my skills in web development and Arduino.'
     },
     {
-        year: '2019',
+        year: 'Oct 2020–Feb 2022',
         title: 'Full-Stack Developer at CTLCo',
         description: 'Built Vantoria, a cloud HR and biometric attendance system. Led Atalaku Xpress, a bus fare platform with rechargeable cards, payment integrations, and QR payments. Local terminal manufacturing cut POS hardware cost by about 30%.'
     },
