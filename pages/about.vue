@@ -7,7 +7,7 @@
                     Senior Full-Stack Engineer
                 </h1>
                 <p class="text-xl text-gray-600 dark:text-gray-300">
-                    At 8Limbs, I replaced a generated app with a codebase the company owns—and shipped the features around it.
+                    Over six years, I've built and shipped web products across the stack—from client websites and payment systems to health and SaaS products.
                 </p>
                 <UButton class="mt-4" to="mailto:ansimapersic@gmail.com" size="lg">
                     <UIcon name="i-heroicons-envelope" class="w-4 h-4 mr-2" />
