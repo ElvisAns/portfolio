@@ -2,16 +2,14 @@
     <main class="max-w-[1280px] mx-auto px-[20px] mt-[50px] text-black dark:text-white">
         <h1 class="dark:text-white text-primary-500 text-[3rem] md:text-[5rem] lg:text-[6rem] font-bold">Ansima Elvis
         </h1>
-        <p class="dark:text-[#def858] text-primary-500 text-4xl">Full-Stack Developer & Entrepreneur</p>
-        <p class="mt-[56px] text-[1.5rem] max-w-[500px] mb-[40px]">I am passionate about anything web development and
-            internet of things!</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] mb-[50px] max-w-[500px]">
-            <a href="https://kvolts-lab.com" class="flex items-center gap-2"><i
-                    class="fa-solid fa-building text-5xl"></i> Founder of <span class="underline">Kilo Volts
-                    Lab</span></a>
-            <a href="https://drive.google.com/file/d/1Zfl0e6i1kWgxQv7xzgC6DbxWYMUBr4-U/view?usp=sharing"
-                class="flex items-center gap-2"><i class="fa-solid fa-certificate text-5xl"></i> <span
-                    class="underline">TEF Certified Business Manager</span></a>
+        <p class="dark:text-[#def858] text-primary-500 text-4xl">Senior Full-Stack Engineer</p>
+        <p class="mt-[56px] text-[1.5rem] max-w-[700px] mb-[40px]">
+            I take products from a rough problem to production—building the interface, API, data layer, and deployment.
+            Six years shipping web platforms with Laravel, Vue, Nuxt, and Cloudflare.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] mb-[50px] max-w-[700px]">
+            <div class="flex items-center gap-3"><i class="fa-solid fa-download text-3xl"></i> 200+ installs on the Webflow Marketplace</div>
+            <div class="flex items-center gap-3"><i class="fa-solid fa-globe text-3xl"></i> 100+ sites migrated with Website Importer</div>
         </div>
         <div
             class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] mb-[100px] border-2 border-primary-500/20 rounded-xl p-6 dark:bg-gray-900/50 bg-white backdrop-blur-sm relative electric-border">
@@ -19,15 +17,12 @@
                 <img src="~/assets/images/me.jpg" alt="Ansima Elvis"
                     class="w-auto h-[80px] rounded-full inline-block float-left" />
                 <p class="text-black dark:text-white text-2xl md:text-3xl lg:text-5xl"><span
-                        class="dark:text-[#def858] text-primary-500">I write codes</span> that
-                    transform ideas to reality</p>
+                        class="dark:text-[#def858] text-primary-500">I build software</span> teams can run and maintain</p>
             </div>
             <div class="text-black dark:text-white text-lg md:text-2xl mt-[20px]">
-                <p>I started as an Electronics Engineer and became a Full-Stack Developer who loves solving problems
-                    with
-                    technology.</p>
-                <p>I work on building modern web apps and IoT solutions while creating products that make a difference.
-                </p>
+                <p>I work across the stack, from frontend and APIs to data, deployment, and production support.</p>
+                <p>I have replaced prototypes with maintainable applications, improved existing platforms, and shipped
+                    products used by real customers.</p>
                 <div class="flex items-center gap-4 mt-[20px] dark:text-[#def858] text-primary-500 text-3xl relative pb-[20px] flex-wrap">
                     <a href="https://www.linkedin.com/in/cibalinda-elvis/" target="_blank" rel="noopener noreferrer"><i
                             class="fa-brands fa-linkedin"></i></a>
@@ -214,7 +209,8 @@ const { tools, projects } = useProjectsAndTools()
 
 const { setSeo } = useSeo()
 setSeo({
-    title: 'Home | Ansima - Full Stack Developer',
+    title: 'Home | Ansima Elvis - Senior Full-Stack Engineer',
+    description: 'Senior full-stack engineer in Kigali, Rwanda. Six years shipping production web platforms with Laravel, Vue, Nuxt, and Cloudflare.',
 })
 
 let blogs = ref([]);

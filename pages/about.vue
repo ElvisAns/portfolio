@@ -4,18 +4,18 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
             <div>
                 <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                    I'm that fullstack guy, tech guru and entrepreneur to become
+                    Senior Full-Stack Engineer
                 </h1>
                 <p class="text-xl text-gray-600 dark:text-gray-300">
-                    Since that day I smelled tech things, I have never been the same every single day
+                    I take web products from a rough problem to production, and build systems teams can own.
                 </p>
-                <UButton class="mt-4" to="https://calendly.com/ansimapersic/30min" target="_blank" size="lg">
-                    <UIcon name="i-heroicons-calendar-days" class="w-4 h-4 mr-2" />
-                    Book a discovery call
+                <UButton class="mt-4" to="mailto:ansimapersic@gmail.com" size="lg">
+                    <UIcon name="i-heroicons-envelope" class="w-4 h-4 mr-2" />
+                    Get in touch
                 </UButton>
             </div>
             <div class="relative">
-                <img src="~/assets/images/event-pitching-healthlink.jpg" alt="Elvis at work" class="rounded-2xl shadow-xl w-full h-auto" />
+                <img src="~/assets/images/me.jpg" alt="Ansima Elvis" class="rounded-2xl shadow-xl w-full h-auto" />
                 <!-- Decorative elements -->
                 <div class="absolute -right-4 bg-primary-500/20 w-[100%] h-full rounded-2xl -z-10 bottom-6"></div>
             </div>
@@ -24,20 +24,26 @@
         <!-- Introduction -->
         <div class="prose dark:prose-invert max-w-none mb-20">
             <p class="text-xl leading-relaxed mb-6">
-                Hi! I'm Ansima, a software engineer and entrepreneur. I've built my career at the
-                intersection of web development and hardware, and I'm passionate about creating tech solutions
-                that have real-world impact.
+                I'm Ansima, a full-stack engineer based in Kigali, Rwanda. For six years, I've shipped web products
+                across frontend, backend, data, and deployment, primarily with Laravel, Vue, Nuxt, and Cloudflare.
+                I can take over an existing prototype, make it reliable, and leave behind a codebase a team can maintain.
             </p>
             <p class="text-xl leading-relaxed mb-6">
-                Previously, I was working with <a href="https://outliant.com" target="_blank"
-                    class="text-primary-500 hover:underline">Outliant(acquired by Ignite Visibility)</a>, an agency where we helped businesses grow
-                through offering marketing and web development services. This gave me the opportunity to work with a lot of great clients(Like Blend360, Idealdental, Gameday Mens Health, Apollo Theater, etc.) and learn a lot about the digital marketing industry.
-                I am also a core contributor at
+                My recent work includes replacing a generated app with a codebase a company owns, building AI-assisted
+                nutrition tools, moving serverless workloads to Cloudflare Workers, and integrating Stripe.
+                I also shipped Website Importer on the Webflow Marketplace; it has more than 200 installs and has
+                migrated over 100 sites.
+            </p>
+            <p class="text-xl leading-relaxed mb-6">
+                I have shipped production websites for Apollo Theater, Blend360, Ideal Dental, and Gameday Men's Health
+                with <a href="https://outliant.com" target="_blank"
+                    class="text-primary-500 hover:underline">Outliant and Ignite Visibility</a>.
+                I contribute to
                 <a href="https://openhub.net/accounts/ElvisAns" target="_blank"
                     class="text-primary-500 hover:underline">
                     TikiCMS groupware
                 </a>,
-                an opensource PHP based Content Managed System.
+                where I build maintainer tools and improve reliability and performance.
             </p>
 
             <!-- Added Achievement Image -->
@@ -47,7 +53,7 @@
                         alt="TVET Youth Challenge Victory - Health Tracking Device Project"
                         class="rounded-2xl shadow-xl w-auto h-[200px]" />
                     <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 italic pt-2">
-                        Winning the TVET Youth Challenge in 2019 with our health tracking device project
+                        Winning the TVET Youth Challenge in 2019 with a health tracking device project
                     </p>
                 </div>
                 <div class="relative">
@@ -62,30 +68,30 @@
         <InternalAds />
         <!-- Principles -->
         <div class="mb-20">
-            <h2 class="text-3xl font-bold mb-8">My Principles</h2>
+            <h2 class="text-3xl font-bold mb-8">How I Work</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="dark:bg-gray-800 bg-white backdrop-blur-sm p-6 rounded-xl border border-gray-800">
                     <i class="fas fa-bullseye text-primary-500 text-2xl mb-5" aria-hidden="true"></i>
-                    <span class="sr-only">Value-Driven Development</span>
-                    <h3 class="text-xl font-semibold mb-3">Value-Driven Development</h3>
+                    <span class="sr-only">Start with the problem</span>
+                    <h3 class="text-xl font-semibold mb-3">Start with the problem</h3>
                     <p class="text-gray-400">
-                        Focus on delivering tangible value without bias.
+                        Understand what users need, then ship the smallest useful solution.
                     </p>
                 </div>
                 <div class="dark:bg-gray-800 bg-white backdrop-blur-sm p-6 rounded-xl border border-gray-800">
                     <i class="fas fa-check text-primary-500 text-2xl mb-5" aria-hidden="true"></i>
-                    <span class="sr-only">Practical Solutions</span>
-                    <h3 class="text-xl font-semibold mb-3">Practical Solutions</h3>
+                    <span class="sr-only">Build for the team</span>
+                    <h3 class="text-xl font-semibold mb-3">Build for the team</h3>
                     <p class="text-gray-400">
-                        Provide functional solutions with straightforward technology stacks.Clients and users need a working product, no complicated stack!
+                        Choose straightforward tools and leave code that other engineers can understand and maintain.
                     </p>
                 </div>
                 <div class="dark:bg-gray-800 bg-white backdrop-blur-sm p-6 rounded-xl border border-gray-800">
                     <i class="fas fa-expand-arrows-alt text-primary-500 text-2xl mb-5" aria-hidden="true"></i>
-                    <span class="sr-only">Scalable Architecture</span>
-                    <h3 class="text-xl font-semibold mb-3">Scalable Architecture</h3>
+                    <span class="sr-only">Own production</span>
+                    <h3 class="text-xl font-semibold mb-3">Own production</h3>
                     <p class="text-gray-400">
-                        Design with scalability in mind for future growth. 
+                        Take responsibility for deployment, reliability, and what happens after launch.
                     </p>
                 </div>
             </div>
@@ -122,10 +128,11 @@
 
         <!-- CTA -->
         <div class="text-center mb-20">
-            <h2 class="text-3xl font-bold mb-8">Ready to Collaborate?</h2>
-            <UButton class="mt-4" to="https://calendly.com/ansimapersic/30min" target="_blank" size="lg">
-                <UIcon name="i-heroicons-calendar-days" class="w-4 h-4 mr-2" />
-                Book a discovery call
+            <h2 class="text-3xl font-bold mb-4">Interested in working together?</h2>
+            <p class="text-gray-400 mb-4">I'm open to senior full-stack engineering roles and contract work.</p>
+            <UButton class="mt-4" to="mailto:ansimapersic@gmail.com" size="lg">
+                <UIcon name="i-heroicons-envelope" class="w-4 h-4 mr-2" />
+                Get in touch
             </UButton>
         </div>
     </main>
@@ -150,51 +157,41 @@ const timeline = [
     },
     {
         year: '2019',
-        title: 'Professional Career Begins',
-        description: 'Worked on my first enterprise project, Vantoria, which helped CTLCO generate revenue in 2021. Later, we initiated Atalaku Xpress.'
+        title: 'Full-Stack Developer at CTLCo',
+        description: 'Built Vantoria, a cloud HR and biometric attendance system. Led Atalaku Xpress, a bus fare platform with rechargeable cards, payment integrations, and QR payments. Local terminal manufacturing cut POS hardware cost by about 30%.'
     },
     {
-        year: '2021',
-        title: 'Entrepreneurial Venture',
-        description: 'Founded <a class="text-primary-500 underline" href="https://kvolts-lab.com">Kilo Volts Lab</a>, a startup dedicated to solving African challenges through technology. Our flagship product: <a class="text-primary-500 underline" href="https://gethealth.link">HealthLink</a>.'
+        year: '2022–present',
+        title: 'Software Developer at EvoluData',
+        description: 'Contribute to Tiki Wiki CMS Groupware, building maintainer tools, improving reliability and performance, and extending the platform with live IoT dashboards and automation.'
     },
     {
-        year: '2022',
-        title: 'International Collaboration',
-        description: 'Joined Evoludata and contributed to the Tiki Wiki CMS project, marking my first experience working with an international team.'
+        year: '2023–present',
+        title: 'Technical Lead at Kilo Volts Lab',
+        description: 'Lead development of HealthLink, a medical identity product with secure health profiles and medication reminders. Shipped Website Importer on the Webflow Marketplace, integrating Stripe for per-import payments; it has 200+ installs and 100+ migrated sites.'
     },
     {
-        year: '2023',
-        title: 'Career Growth',
-        description: 'Became a full-time engineer at Outliant, focusing on advanced web development projects.'
+        year: '2023–2025',
+        title: 'Frontend Engineer at Outliant and Ignite Visibility',
+        description: 'Shipped and maintained production sites for Apollo Theater, Blend360, Ideal Dental, and Gameday Men’s Health. Improved SEO and Core Web Vitals, and built internal tools to reduce repeat manual work.'
     },
     {
-        year: '2024',
-        title: 'Continuing the Journey',
-        description: 'Thriving at Outliant and eagerly anticipating new challenges and growth opportunities.'
+        year: 'May–Oct 2025',
+        title: 'Software Developer at Axeptio',
+        description: 'Maintained the React plugin that brings Axeptio consent into Webflow and helped move the integration from AWS to Cloudflare.'
     },
     {
-        year : 'Jan 2025',
-        title : "Kilo Volts Lab get supported by Orange Corners",
-        description : "Kilo Volts Lab get supported by Orange Corners, a startup accelerator program."
+        year: 'Jan–Apr 2026',
+        title: 'Senior Full-Stack Developer at 8Limbs',
+        description: 'Replaced a generated app with a codebase the company owns and shipped food and fridge scanners with daily nutrition tracking. Moved serverless functions to Cloudflare Workers, automated deploys, and added Stripe subscriptions and webhooks.'
     },
-    {
-        year: 'Mid-2025',
-        title: 'Outliant get acquired by Ignite Visibility',
-        description: 'Outliant get acquired by Ignite Visibility, a digital marketing agency.'
-    },
-    {
-        year: 'December 2025',
-        title: 'My journey at Outliant comes to an end',
-        description: 'My journey at Outliant comes to an end. I have learned a lot and I am grateful for the opportunity to work with such a great team. I am looking forward to the next chapter of my career.'
-    }
 ];
 
 // SEO
 useHead({
     title: 'About Me | Ansima Elvis',
     meta: [
-        { name: 'description', content: 'Software engineer and entrepreneur, specializing in web development and IoT solutions.' }
+        { name: 'description', content: 'Senior full-stack engineer in Kigali, Rwanda. Six years building and maintaining production web products with Laravel, Vue, Nuxt, and Cloudflare.' }
     ]
 })
 </script>
