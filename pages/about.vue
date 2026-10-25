@@ -4,18 +4,18 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
             <div>
                 <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                    I'm that fullstack guy, tech guru and entrepreneur to become
+                    Senior Full-Stack Engineer
                 </h1>
                 <p class="text-xl text-gray-600 dark:text-gray-300">
-                    Since that day I smelled tech things, I have never been the same every single day
+                    Over six years, I've built and shipped web products across the stack—from client websites and payment systems to health and SaaS products.
                 </p>
-                <UButton class="mt-4" to="https://calendly.com/ansimapersic/30min" target="_blank" size="lg">
-                    <UIcon name="i-heroicons-calendar-days" class="w-4 h-4 mr-2" />
-                    Book a discovery call
+                <UButton class="mt-4" to="mailto:ansimapersic@gmail.com" size="lg">
+                    <UIcon name="i-heroicons-envelope" class="w-4 h-4 mr-2" />
+                    Get in touch
                 </UButton>
             </div>
             <div class="relative">
-                <img src="~/assets/images/event-pitching-healthlink.jpg" alt="Elvis at work" class="rounded-2xl shadow-xl w-full h-auto" />
+                <img src="~/assets/images/me.jpg" alt="Ansima Elvis" class="rounded-2xl shadow-xl w-full h-auto" />
                 <!-- Decorative elements -->
                 <div class="absolute -right-4 bg-primary-500/20 w-[100%] h-full rounded-2xl -z-10 bottom-6"></div>
             </div>
@@ -24,20 +24,26 @@
         <!-- Introduction -->
         <div class="prose dark:prose-invert max-w-none mb-20">
             <p class="text-xl leading-relaxed mb-6">
-                Hi! I'm Ansima, a software engineer and entrepreneur. I've built my career at the
-                intersection of web development and hardware, and I'm passionate about creating tech solutions
-                that have real-world impact.
+                I'm Ansima, a full-stack engineer in Kigali. Most recently, I took over 8Limbs’ Lovable-generated
+                fight-club app and replaced it with a codebase the company owns. I also built a food scanner, a fridge
+                scanner, and daily intake tracking, then moved its serverless functions to Cloudflare Workers and
+                added Stripe subscriptions and webhooks.
             </p>
             <p class="text-xl leading-relaxed mb-6">
-                Previously, I was working with <a href="https://outliant.com" target="_blank"
-                    class="text-primary-500 hover:underline">Outliant(acquired by Ignite Visibility)</a>, an agency where we helped businesses grow
-                through offering marketing and web development services. This gave me the opportunity to work with a lot of great clients(Like Blend360, Idealdental, Gameday Mens Health, Apollo Theater, etc.) and learn a lot about the digital marketing industry.
-                I am also a core contributor at
+                At Kilo Volts Lab, I shipped Website Importer on the Webflow Marketplace. It charges per import through
+                Stripe and has been installed over 200 times; more than 100 websites have been migrated. I also lead
+                HealthLink, a QR/NFC bracelet and card that links to a secure health profile, with medication reminders
+                sent over WhatsApp.
+            </p>
+            <p class="text-xl leading-relaxed mb-6">
+                Earlier, at CTLCo, I built Vantoria’s biometric attendance system and led Atalaku Xpress, a bus-fare
+                platform with rechargeable cards and mobile-money and bank payments. I also make regular contributions to
                 <a href="https://openhub.net/accounts/ElvisAns" target="_blank"
                     class="text-primary-500 hover:underline">
                     TikiCMS groupware
                 </a>,
-                an opensource PHP based Content Managed System.
+                including maintainer tools and Tiki IoT dashboards. At Outliant and Ignite Visibility, I worked on
+                production sites for Apollo Theater, Blend360, Ideal Dental, and Gameday Men’s Health.
             </p>
 
             <!-- Added Achievement Image -->
@@ -47,7 +53,7 @@
                         alt="TVET Youth Challenge Victory - Health Tracking Device Project"
                         class="rounded-2xl shadow-xl w-auto h-[200px]" />
                     <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 italic pt-2">
-                        Winning the TVET Youth Challenge in 2019 with our health tracking device project
+                        Winning the TVET Youth Challenge in 2019 with a health tracking device project
                     </p>
                 </div>
                 <div class="relative">
@@ -62,30 +68,30 @@
         <InternalAds />
         <!-- Principles -->
         <div class="mb-20">
-            <h2 class="text-3xl font-bold mb-8">My Principles</h2>
+            <h2 class="text-3xl font-bold mb-8">A few things I’ve built</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="dark:bg-gray-800 bg-white backdrop-blur-sm p-6 rounded-xl border border-gray-800">
                     <i class="fas fa-bullseye text-primary-500 text-2xl mb-5" aria-hidden="true"></i>
-                    <span class="sr-only">Value-Driven Development</span>
-                    <h3 class="text-xl font-semibold mb-3">Value-Driven Development</h3>
+                    <span class="sr-only">HealthLink</span>
+                    <h3 class="text-xl font-semibold mb-3">HealthLink</h3>
                     <p class="text-gray-400">
-                        Focus on delivering tangible value without bias.
+                        A QR/NFC card or bracelet opens a person’s secure health profile. Built with Laravel, Vue, and Cloudflare.
                     </p>
                 </div>
                 <div class="dark:bg-gray-800 bg-white backdrop-blur-sm p-6 rounded-xl border border-gray-800">
                     <i class="fas fa-check text-primary-500 text-2xl mb-5" aria-hidden="true"></i>
-                    <span class="sr-only">Practical Solutions</span>
-                    <h3 class="text-xl font-semibold mb-3">Practical Solutions</h3>
+                    <span class="sr-only">Website Importer</span>
+                    <h3 class="text-xl font-semibold mb-3">Website Importer</h3>
                     <p class="text-gray-400">
-                        Provide functional solutions with straightforward technology stacks.Clients and users need a working product, no complicated stack!
+                        A Webflow Marketplace app for migrating sites from other platforms. 200+ installs; 100+ sites migrated.
                     </p>
                 </div>
                 <div class="dark:bg-gray-800 bg-white backdrop-blur-sm p-6 rounded-xl border border-gray-800">
                     <i class="fas fa-expand-arrows-alt text-primary-500 text-2xl mb-5" aria-hidden="true"></i>
-                    <span class="sr-only">Scalable Architecture</span>
-                    <h3 class="text-xl font-semibold mb-3">Scalable Architecture</h3>
+                    <span class="sr-only">Atalaku Xpress</span>
+                    <h3 class="text-xl font-semibold mb-3">Atalaku Xpress</h3>
                     <p class="text-gray-400">
-                        Design with scalability in mind for future growth. 
+                        Bus fares with rechargeable cards, QR payments, and mobile-money and bank integrations.
                     </p>
                 </div>
             </div>
@@ -122,10 +128,11 @@
 
         <!-- CTA -->
         <div class="text-center mb-20">
-            <h2 class="text-3xl font-bold mb-8">Ready to Collaborate?</h2>
-            <UButton class="mt-4" to="https://calendly.com/ansimapersic/30min" target="_blank" size="lg">
-                <UIcon name="i-heroicons-calendar-days" class="w-4 h-4 mr-2" />
-                Book a discovery call
+            <h2 class="text-3xl font-bold mb-4">Interested in working together?</h2>
+            <p class="text-gray-400 mb-4">I'm open to senior full-stack engineering roles and contract work.</p>
+            <UButton class="mt-4" to="mailto:ansimapersic@gmail.com" size="lg">
+                <UIcon name="i-heroicons-envelope" class="w-4 h-4 mr-2" />
+                Get in touch
             </UButton>
         </div>
     </main>
@@ -149,52 +156,42 @@ const timeline = [
         description: 'Developed an attendance system that combined my skills in web development and Arduino.'
     },
     {
-        year: '2019',
-        title: 'Professional Career Begins',
-        description: 'Worked on my first enterprise project, Vantoria, which helped CTLCO generate revenue in 2021. Later, we initiated Atalaku Xpress.'
+        year: 'Oct 2020–Feb 2022',
+        title: 'Full-Stack Developer at CTLCo',
+        description: 'Built Vantoria, a cloud HR and biometric attendance system. Led Atalaku Xpress, a bus fare platform with rechargeable cards, payment integrations, and QR payments. Local terminal manufacturing cut POS hardware cost by about 30%.'
     },
     {
-        year: '2021',
-        title: 'Entrepreneurial Venture',
-        description: 'Founded <a class="text-primary-500 underline" href="https://kvolts-lab.com">Kilo Volts Lab</a>, a startup dedicated to solving African challenges through technology. Our flagship product: <a class="text-primary-500 underline" href="https://gethealth.link">HealthLink</a>.'
+        year: '2022–present',
+        title: 'Software Developer at EvoluData',
+        description: 'Contribute to Tiki Wiki CMS Groupware, building maintainer tools, improving reliability and performance, and extending the platform with live IoT dashboards and automation.'
     },
     {
-        year: '2022',
-        title: 'International Collaboration',
-        description: 'Joined Evoludata and contributed to the Tiki Wiki CMS project, marking my first experience working with an international team.'
+        year: '2023–present',
+        title: 'Technical Lead at Kilo Volts Lab',
+        description: 'Lead development of HealthLink, a medical identity product with secure health profiles and medication reminders. Shipped Website Importer on the Webflow Marketplace, integrating Stripe for per-import payments; it has 200+ installs and 100+ migrated sites.'
     },
     {
-        year: '2023',
-        title: 'Career Growth',
-        description: 'Became a full-time engineer at Outliant, focusing on advanced web development projects.'
+        year: '2023–2025',
+        title: 'Frontend Engineer at Outliant and Ignite Visibility',
+        description: 'Shipped and maintained production sites for Apollo Theater, Blend360, Ideal Dental, and Gameday Men’s Health. Improved SEO and Core Web Vitals, and built internal tools to reduce repeat manual work.'
     },
     {
-        year: '2024',
-        title: 'Continuing the Journey',
-        description: 'Thriving at Outliant and eagerly anticipating new challenges and growth opportunities.'
+        year: 'May–Oct 2025',
+        title: 'Software Developer at Axeptio',
+        description: 'Maintained the React plugin that brings Axeptio consent into Webflow and helped move the integration from AWS to Cloudflare.'
     },
     {
-        year : 'Jan 2025',
-        title : "Kilo Volts Lab get supported by Orange Corners",
-        description : "Kilo Volts Lab get supported by Orange Corners, a startup accelerator program."
+        year: 'Jan–Apr 2026',
+        title: 'Senior Full-Stack Developer at 8Limbs',
+        description: 'Replaced a generated app with a codebase the company owns and shipped food and fridge scanners with daily nutrition tracking. Moved serverless functions to Cloudflare Workers, automated deploys, and added Stripe subscriptions and webhooks.'
     },
-    {
-        year: 'Mid-2025',
-        title: 'Outliant get acquired by Ignite Visibility',
-        description: 'Outliant get acquired by Ignite Visibility, a digital marketing agency.'
-    },
-    {
-        year: 'December 2025',
-        title: 'My journey at Outliant comes to an end',
-        description: 'My journey at Outliant comes to an end. I have learned a lot and I am grateful for the opportunity to work with such a great team. I am looking forward to the next chapter of my career.'
-    }
 ];
 
 // SEO
 useHead({
     title: 'About Me | Ansima Elvis',
     meta: [
-        { name: 'description', content: 'Software engineer and entrepreneur, specializing in web development and IoT solutions.' }
+        { name: 'description', content: 'Ansima Elvis is a full-stack engineer in Kigali. His work includes a Webflow migration app with 200+ installs, a QR/NFC health profile, and production web platforms.' }
     ]
 })
 </script>

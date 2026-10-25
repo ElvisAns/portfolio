@@ -2,16 +2,13 @@
     <main class="max-w-[1280px] mx-auto px-[20px] mt-[50px] text-black dark:text-white">
         <h1 class="dark:text-white text-primary-500 text-[3rem] md:text-[5rem] lg:text-[6rem] font-bold">Ansima Elvis
         </h1>
-        <p class="dark:text-[#def858] text-primary-500 text-4xl">Full-Stack Developer & Entrepreneur</p>
-        <p class="mt-[56px] text-[1.5rem] max-w-[500px] mb-[40px]">I am passionate about anything web development and
-            internet of things!</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] mb-[50px] max-w-[500px]">
-            <a href="https://kvolts-lab.com" class="flex items-center gap-2"><i
-                    class="fa-solid fa-building text-5xl"></i> Founder of <span class="underline">Kilo Volts
-                    Lab</span></a>
-            <a href="https://drive.google.com/file/d/1Zfl0e6i1kWgxQv7xzgC6DbxWYMUBr4-U/view?usp=sharing"
-                class="flex items-center gap-2"><i class="fa-solid fa-certificate text-5xl"></i> <span
-                    class="underline">TEF Certified Business Manager</span></a>
+        <p class="dark:text-[#def858] text-primary-500 text-4xl">Senior Full-Stack Engineer</p>
+        <p class="mt-[56px] text-[1.5rem] max-w-[700px] mb-[40px]">
+            I’ve shipped a Webflow Marketplace tool that migrated 100+ sites, production websites for Apollo Theater
+            and other brands, and payment and biometric systems for transport and HR.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] mb-[50px] max-w-[700px]">
+            <div class="flex items-center gap-3"><i class="fa-solid fa-globe text-3xl"></i> 100+ websites moved into Webflow</div>
         </div>
         <div
             class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] mb-[100px] border-2 border-primary-500/20 rounded-xl p-6 dark:bg-gray-900/50 bg-white backdrop-blur-sm relative electric-border">
@@ -19,15 +16,13 @@
                 <img src="~/assets/images/me.jpg" alt="Ansima Elvis"
                     class="w-auto h-[80px] rounded-full inline-block float-left" />
                 <p class="text-black dark:text-white text-2xl md:text-3xl lg:text-5xl"><span
-                        class="dark:text-[#def858] text-primary-500">I write codes</span> that
-                    transform ideas to reality</p>
+                        class="dark:text-[#def858] text-primary-500">I work across</span> the app, the API, and production</p>
             </div>
             <div class="text-black dark:text-white text-lg md:text-2xl mt-[20px]">
-                <p>I started as an Electronics Engineer and became a Full-Stack Developer who loves solving problems
-                    with
-                    technology.</p>
-                <p>I work on building modern web apps and IoT solutions while creating products that make a difference.
-                </p>
+                <p>My day-to-day tools are Laravel, Vue, Nuxt, and Cloudflare. I’ve also built React integrations,
+                    Stripe payments, and software that talks to QR cards, NFC tags, and biometric readers.</p>
+                <p>Before 8Limbs, I helped ship websites for Apollo Theater and other client teams, built a Webflow
+                    migration tool, and worked on bus payments and biometric attendance systems.</p>
                 <div class="flex items-center gap-4 mt-[20px] dark:text-[#def858] text-primary-500 text-3xl relative pb-[20px] flex-wrap">
                     <a href="https://www.linkedin.com/in/cibalinda-elvis/" target="_blank" rel="noopener noreferrer"><i
                             class="fa-brands fa-linkedin"></i></a>
@@ -214,7 +209,8 @@ const { tools, projects } = useProjectsAndTools()
 
 const { setSeo } = useSeo()
 setSeo({
-    title: 'Home | Ansima - Full Stack Developer',
+    title: 'Home | Ansima Elvis - Senior Full-Stack Engineer',
+    description: 'Ansima Elvis replaced a generated app with a company-owned codebase, shipped a Webflow migration app with 200+ installs, and builds with Laravel, Vue, and Cloudflare.',
 })
 
 let blogs = ref([]);

@@ -1,7 +1,7 @@
 export const useSeo = () => {
   const config = {
-    title: 'Ansima - Full Stack Developer',
-    description: 'I am a full stack developer and entrepreneur, I help businesses bring their ideas to life.',
+    title: 'Ansima Elvis - Senior Full-Stack Engineer',
+    description: 'Senior full-stack engineer building and maintaining production web products with Laravel, Vue, Nuxt, and Cloudflare.',
     image: 'https://res.cloudinary.com/elvisansimapersic/image/upload/v1731804850/og-image-min_np6ezc.jpg',
     url: 'https://ansima.dev',
   }
