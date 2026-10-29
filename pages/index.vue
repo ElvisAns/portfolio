@@ -2,33 +2,25 @@
     <main class="max-w-[1280px] mx-auto px-[20px] mt-[50px] text-black dark:text-white">
         <h1 class="dark:text-white text-primary-500 text-[3rem] md:text-[5rem] lg:text-[6rem] font-bold">Ansima Elvis
         </h1>
-        <p class="dark:text-[#def858] text-primary-500 text-4xl">Full-Stack Developer & Entrepreneur</p>
-        <p class="mt-[56px] text-[1.5rem] max-w-[500px] mb-[40px]">I am passionate about anything web development and
-            internet of things!</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] mb-[50px] max-w-[500px]">
-            <a href="https://kvolts-lab.com" class="flex items-center gap-2"><i
-                    class="fa-solid fa-building text-5xl"></i> Founder of <span class="underline">Kilo Volts
-                    Lab</span></a>
-            <a href="https://drive.google.com/file/d/1Zfl0e6i1kWgxQv7xzgC6DbxWYMUBr4-U/view?usp=sharing"
-                class="flex items-center gap-2"><i class="fa-solid fa-certificate text-5xl"></i> <span
-                    class="underline">TEF Certified Business Manager</span></a>
+        <p class="dark:text-[#def858] text-primary-500 text-4xl mb-[40px]">Full-Stack Developer</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-[20px] mb-[50px]">
+            <div v-for="practice in practices" :key="practice.title"
+                class="rounded-xl border border-gray-800 dark:bg-gray-900/50 bg-white p-5">
+                <i :class="[practice.icon, 'text-2xl dark:text-[#def858] text-primary-500']" aria-hidden="true"></i>
+                <h2 class="text-xl font-semibold mt-3">{{ practice.title }}</h2>
+                <p class="text-base mt-2 text-gray-600 dark:text-gray-300">{{ practice.text }}</p>
+            </div>
         </div>
         <div
             class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] mb-[100px] border-2 border-primary-500/20 rounded-xl p-6 dark:bg-gray-900/50 bg-white backdrop-blur-sm relative electric-border">
-            <div class="flex items-start md:items-center gap-[30px] flex-col md:flex-row">
+            <div class="flex items-start gap-[30px] flex-col md:flex-row md:col-span-2">
                 <img src="~/assets/images/me.jpg" alt="Ansima Elvis"
-                    class="w-auto h-[80px] rounded-full inline-block float-left" />
-                <p class="text-black dark:text-white text-2xl md:text-3xl lg:text-5xl"><span
-                        class="dark:text-[#def858] text-primary-500">I write codes</span> that
-                    transform ideas to reality</p>
-            </div>
-            <div class="text-black dark:text-white text-lg md:text-2xl mt-[20px]">
-                <p>I started as an Electronics Engineer and became a Full-Stack Developer who loves solving problems
-                    with
-                    technology.</p>
-                <p>I work on building modern web apps and IoT solutions while creating products that make a difference.
-                </p>
-                <div class="flex items-center gap-4 mt-[20px] dark:text-[#def858] text-primary-500 text-3xl relative pb-[20px] flex-wrap">
+                    class="w-auto h-[80px] rounded-full" />
+                <div>
+                    <p class="text-[1.5rem] max-w-[760px]">I build web applications from frontend to backend.
+                        Beyond the code, I manage servers, optimize websites for search engines, turn data into insights, and build
+                        products people are willing to pay for.</p>
+                    <div class="flex items-center gap-4 mt-[20px] dark:text-[#def858] text-primary-500 text-3xl relative flex-wrap">
                     <a href="https://www.linkedin.com/in/cibalinda-elvis/" target="_blank" rel="noopener noreferrer"><i
                             class="fa-brands fa-linkedin"></i></a>
                     <a href="https://github.com/ElvisAns" target="_blank" rel="noopener noreferrer"><i
@@ -42,6 +34,7 @@
                     <a class="text-lg"
                         href="https://drive.google.com/file/d/1sXzWSib5oYmb8QLQCY8-TGTXYO8doXGl/view?usp=sharing"
                         target="_blank" rel="noopener noreferrer">Resume <i class="fas fa-external-link-alt"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -153,14 +146,14 @@
         <!-- GitHub Stats -->
         <div class="my-[100px] text-center">
             <h2 class="text-3xl font-bold mb-8">Open Source Contributions</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="flex justify-end">
+            <div class="flex justify-center">
+                <!--div class="flex justify-end">
                     <img 
                         src="https://github-readme-stats.vercel.app/api?username=ElvisAns&show_icons=true&theme=dark"
                         alt="GitHub Stats" 
                         class="w-full object-contain" 
                     />
-                </div>
+                </div-->
                 <div class="flex justify-end">
                     <img 
                         src="https://github-readme-streak-stats.herokuapp.com/?user=ElvisAns&theme=dark"
@@ -215,6 +208,7 @@ const { tools, projects } = useProjectsAndTools()
 const { setSeo } = useSeo()
 setSeo({
     title: 'Home | Ansima - Full Stack Developer',
+    description: 'Full-stack developer who ships web apps, runs servers, improves SEO, sells the product, and turns data into reports.',
 })
 
 let blogs = ref([]);
@@ -232,6 +226,29 @@ onMounted(async () => {
         pending.value = false
     }
 })
+
+const practices = [
+    {
+        title: 'DevOps',
+        icon: 'fas fa-server',
+        text: 'Linux, Cloudflare, deployments, backups. Keeping applications reliable and running smoothly.',
+    },
+    {
+        title: 'SEO',
+        icon: 'fas fa-search',
+        text: 'Making websites faster, improving search visibility, and turning organic traffic into opportunities.',
+    },
+    {
+        title: 'Data Analysis',
+        icon: 'fas fa-chart-bar',
+        text: 'Dashboards, reports, and useful insights. Understanding what the numbers say instead of guessing.',
+    },
+    {
+        title: 'Product & Sales',
+        icon: 'fas fa-handshake',
+        text: 'Building products that solve real problems, communicate clear value, and have the potential to make money.',
+    },
+]
 
 const techStack = [
     { name: 'Laravel', icon: 'fab fa-laravel' },
