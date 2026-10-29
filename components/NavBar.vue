@@ -5,7 +5,7 @@
                 <img 
                     src="~/assets/images/avatar-min.webp" 
                     alt="Ansima Logo" 
-                    class="w-[60px] h-[60px] rounded-full border-2 border-white" 
+                    class="w-[60px] h-[60px] rounded-xl border-2 border-white bg-[#fd3e62]" 
                 />
             </NuxtLink>   
             
