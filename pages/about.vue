@@ -24,7 +24,7 @@
         <!-- Introduction -->
         <div class="prose dark:prose-invert max-w-none mb-20">
             <p class="text-xl leading-relaxed mb-6">
-                Hi! I'm Ansima, a full-stack developer. Most of my work is Laravel, Vue or Nuxt, and the server the site runs on, usually Linux or Cloudflare. For six years that has meant the interface, the API, and whatever has to stay up after launch.
+                Hi! I'm Ansima, a full-stack developer. Most of my work is Laravel, Vue, Nuxt, React, and Next.js, and the server the site runs on, usually Linux or Cloudflare. For six years that has meant the interface, the API, and whatever has to stay up after launch.
             </p>
             <p class="text-xl leading-relaxed mb-6">
                 I worked with <a href="https://outliant.com" target="_blank"

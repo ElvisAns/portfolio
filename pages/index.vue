@@ -15,7 +15,7 @@
             class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] mb-[100px] border-2 border-primary-500/20 rounded-xl p-6 dark:bg-gray-900/50 bg-white backdrop-blur-sm relative electric-border">
             <div class="flex items-start gap-[30px] flex-col md:flex-row md:col-span-2">
                 <img src="~/assets/images/me.jpg" alt="Ansima Elvis"
-                    class="w-auto h-[80px] rounded-full" />
+                    class="w-auto h-[160px] rounded-xl" />
                 <div>
                     <p class="text-[1.5rem] max-w-[760px]">I build web applications from frontend to backend.
                         Beyond the code, I manage servers, optimize websites for search engines, turn data into insights, and build
@@ -137,7 +137,7 @@
                 <div v-for="tech in techStack" :key="tech.name"
                     class="group flex flex-col items-center p-4 dark:bg-gray-900/50 bg-white rounded-xl backdrop-blur-sm border border-gray-800 hover:border-primary-500/50 transition-all">
                     <i v-if="!tech.image" :class="[tech.icon, 'text-4xl mb-2 group-hover:text-primary-500']"></i>
-                    <img v-else :src="tech.image" :alt="tech.name" class="w-auto h-[40px] mb-2 group-hover:scale-110 transition-all">
+                    <img v-else :src="tech.image" :alt="tech.name" :class="['w-auto h-[40px] mb-2 group-hover:scale-110 transition-all', tech.invert ? 'dark:invert' : '']">
                     <span class="text-sm text-gray-400">{{ tech.name }}</span>
                 </div>
             </div>
@@ -201,6 +201,7 @@ import { useBrands } from '~/composables/useBrands'
 import { useProjectsAndTools } from '~/composables/useProjectsAndTools'
 import nuxtIcon from '~/assets/images/icons8-nuxt-js.svg'
 import jqueryIcon from '~/assets/images/jquery.svg'
+import nextIcon from '~/assets/images/nextjs.svg'
 
 const { brands } = useBrands()
 const { tools, projects } = useProjectsAndTools()
@@ -255,8 +256,10 @@ const techStack = [
     { name: 'SQL', icon: 'fas fa-database' },
     { name: 'JavaScript', icon: 'fab fa-js' },
     { name: 'Vue.js', icon: 'fab fa-vuejs' },
+    { name: 'React', icon: 'fab fa-react' },
     { name: 'jQuery', icon: false, image: jqueryIcon },
     { name: 'Nuxt.js', icon: false, image: nuxtIcon },
+    { name: 'Next.js', icon: false, image: nextIcon, invert: true },
     { name: 'Webflow', icon: 'fab fa-webflow' },
     { name: 'Docker', icon: 'fab fa-docker' },
     { name: 'AWS', icon: 'fab fa-aws' },
