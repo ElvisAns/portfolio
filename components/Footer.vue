@@ -7,7 +7,7 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4 dark:text-white text-black">Ansima Elvis</h3>
                     <p class="text-gray-400 mb-4">
-                        Full-Stack Developer & Entrepreneur building modern web applications and IoT solutions.
+                        Full-stack developer. I build web apps, run servers, improve SEO, sell the product, and read the data.
                     </p>
                     <div class="flex space-x-4 dark:text-gray-400 text-gray-800">
                         <a href="https://www.linkedin.com/in/cibalinda-elvis/" 
@@ -48,6 +48,11 @@
                         <li>
                             <NuxtLink to="/tools" class="hover:text-primary-500 transition-colors">
                                 Tools
+                            </NuxtLink>
+                        </li>
+                        <li>
+                            <NuxtLink to="/books" class="hover:text-primary-500 transition-colors">
+                                Books
                             </NuxtLink>
                         </li>
                         <li>
