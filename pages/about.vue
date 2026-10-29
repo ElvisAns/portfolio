@@ -4,10 +4,10 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
             <div>
                 <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                    I'm that fullstack guy, tech guru and entrepreneur to become
+                    I build web applications from frontend to backend
                 </h1>
                 <p class="text-xl text-gray-600 dark:text-gray-300">
-                    Since that day I smelled tech things, I have never been the same every single day
+                    Beyond the code, I manage servers, optimize websites for search engines, turn data into insights, and build products people are willing to pay for.
                 </p>
                 <UButton class="mt-4" to="https://calendly.com/ansimapersic/30min" target="_blank" size="lg">
                     <UIcon name="i-heroicons-calendar-days" class="w-4 h-4 mr-2" />
@@ -24,20 +24,17 @@
         <!-- Introduction -->
         <div class="prose dark:prose-invert max-w-none mb-20">
             <p class="text-xl leading-relaxed mb-6">
-                Hi! I'm Ansima, a software engineer and entrepreneur. I've built my career at the
-                intersection of web development and hardware, and I'm passionate about creating tech solutions
-                that have real-world impact.
+                Hi! I'm Ansima, a full-stack developer. Most of my work is Laravel, Vue or Nuxt, and the server the site runs on, usually Linux or Cloudflare. For six years that has meant the interface, the API, and whatever has to stay up after launch.
             </p>
             <p class="text-xl leading-relaxed mb-6">
-                Previously, I was working with <a href="https://outliant.com" target="_blank"
-                    class="text-primary-500 hover:underline">Outliant(acquired by Ignite Visibility)</a>, an agency where we helped businesses grow
-                through offering marketing and web development services. This gave me the opportunity to work with a lot of great clients(Like Blend360, Idealdental, Gameday Mens Health, Apollo Theater, etc.) and learn a lot about the digital marketing industry.
-                I am also a core contributor at
+                I worked with <a href="https://outliant.com" target="_blank"
+                    class="text-primary-500 hover:underline">Outliant (acquired by Ignite Visibility)</a> on production sites for brands including Apollo Theater, Blend360, Ideal Dental, and Gameday Men's Health. A lot of that work was SEO and Core Web Vitals.
+                I also contribute to
                 <a href="https://openhub.net/accounts/ElvisAns" target="_blank"
                     class="text-primary-500 hover:underline">
-                    TikiCMS groupware
+                    Tiki Wiki CMS
                 </a>,
-                an opensource PHP based Content Managed System.
+                an open-source PHP platform, where I build maintainer tools and dashboards from tracker data.
             </p>
 
             <!-- Added Achievement Image -->
@@ -110,7 +107,7 @@
                     </p>
                     <p class="flex items-center gap-3">
                         <i class="fas fa-dumbbell text-primary-500"></i>
-                        Gym enthusiast (when not busy building the future)
+                        Gym enthusiast (when I am not at the keyboard)
                     </p>
                     <p class="flex items-center gap-3">
                         <i class="fas fa-laugh-beam text-primary-500"></i>
@@ -149,44 +146,34 @@ const timeline = [
         description: 'Developed an attendance system that combined my skills in web development and Arduino.'
     },
     {
-        year: '2019',
-        title: 'Professional Career Begins',
-        description: 'Worked on my first enterprise project, Vantoria, which helped CTLCO generate revenue in 2021. Later, we initiated Atalaku Xpress.'
+        year: '2020–2022',
+        title: 'Full-stack developer, CTL Company',
+        description: 'Built Vantoria, a cloud HR platform with biometric attendance, and Atalaku Xpress. Designed the backend, the APIs, and the frontend, led technical delivery, and cut hardware cost by manufacturing the terminals locally. Goma.'
     },
     {
-        year: '2021',
-        title: 'Entrepreneurial Venture',
-        description: 'Founded <a class="text-primary-500 underline" href="https://kvolts-lab.com">Kilo Volts Lab</a>, a startup dedicated to solving African challenges through technology. Our flagship product: <a class="text-primary-500 underline" href="https://gethealth.link">HealthLink</a>.'
+        year: '2022–now',
+        title: 'Freelance web developer, Evoludata',
+        description: 'Contributing to <a class="text-primary-500 underline" href="https://openhub.net/accounts/ElvisAns">Tiki Wiki</a>, a large open-source PHP CMS. Building maintainer tools, including a debugger and UI modules, and improving reliability and performance. Remote.'
     },
     {
-        year: '2022',
-        title: 'International Collaboration',
-        description: 'Joined Evoludata and contributed to the Tiki Wiki CMS project, marking my first experience working with an international team.'
+        year: '2023–2025',
+        title: 'Frontend engineer, Outliant / Ignite Visibility',
+        description: 'Built marketing websites in Webflow and JavaScript for international clients, including Apollo Theater, Blend360, Ideal Dental, and Gameday Men’s Health. Optimized SEO and Core Web Vitals, and built internal tools and automation so repeat delivery work was not done by hand. Remote.'
     },
     {
-        year: '2023',
-        title: 'Career Growth',
-        description: 'Became a full-time engineer at Outliant, focusing on advanced web development projects.'
+        year: '2023–now',
+        title: 'Technical founder, Kilo Volts Lab',
+        description: 'Building and deploying <a class="text-primary-500 underline" href="https://gethealth.link">HealthLink</a>, a cloud platform for instant access to a patient medical record. Full-stack on Laravel and Vue, plus the VPS, CI/CD, and the production systems. Remote.'
     },
     {
-        year: '2024',
-        title: 'Continuing the Journey',
-        description: 'Thriving at Outliant and eagerly anticipating new challenges and growth opportunities.'
+        year: '2025',
+        title: 'Software developer, Axeptio',
+        description: 'Maintained the React plugin that runs Axeptio consent inside Webflow, and helped move that integration from AWS to Cloudflare. May to October, remote.'
     },
     {
-        year : 'Jan 2025',
-        title : "Kilo Volts Lab get supported by Orange Corners",
-        description : "Kilo Volts Lab get supported by Orange Corners, a startup accelerator program."
-    },
-    {
-        year: 'Mid-2025',
-        title: 'Outliant get acquired by Ignite Visibility',
-        description: 'Outliant get acquired by Ignite Visibility, a digital marketing agency.'
-    },
-    {
-        year: 'December 2025',
-        title: 'My journey at Outliant comes to an end',
-        description: 'My journey at Outliant comes to an end. I have learned a lot and I am grateful for the opportunity to work with such a great team. I am looking forward to the next chapter of my career.'
+        year: '2026',
+        title: 'Senior full-stack developer, 8Limbs Inc',
+        description: 'Replaced the Lovable-generated 8 Limbs app with a codebase the company owns, and shipped AI nutrition tools: a food scanner, a fridge scanner, and daily intake tracking. Moved serverless functions from Supabase to Cloudflare Workers, automated deploys, lowered infrastructure cost, and added Stripe subscriptions. January to April, Canada, remote.'
     }
 ];
 
@@ -194,7 +181,7 @@ const timeline = [
 useHead({
     title: 'About Me | Ansima Elvis',
     meta: [
-        { name: 'description', content: 'Software engineer and entrepreneur, specializing in web development and IoT solutions.' }
+        { name: 'description', content: 'Full-stack developer who builds web applications, manages servers, improves SEO, turns data into insights, and ships products people pay for.' }
     ]
 })
 </script>
