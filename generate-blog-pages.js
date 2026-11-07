@@ -11,11 +11,18 @@ const __dirname = dirname(__filename);
 function fetchMetaData(apiUrl) {
   return new Promise(async (resolve, reject) => {
     try {
-        const response = await fetch(apiUrl);
+        // dev.to serves list responses from a CDN cache; bust it with a unique URL and no-cache headers
+        const url = `${apiUrl}&_=${Date.now()}`;
+        const response = await fetch(url, {
+          headers: { 'Cache-Control': 'no-cache', 'Pragma': 'no-cache' },
+        });
         if (!response.ok) {
           throw new Error(`HTTP Error: ${response.status}`);
         }
         const metaData = await response.json();
+        if (!Array.isArray(metaData)) {
+          throw new Error('Unexpected API response');
+        }
         resolve(metaData);
       } catch (error) {
         reject({error: error.message });

@@ -1,11 +1,12 @@
-# There are a few issues in this GitHub Actions workflow:
-
 name: Generate Blog Pages
 
 on:
   schedule:
     - cron: '0 0 * * *' # Runs daily at midnight (adjust as needed) 
   workflow_dispatch: {} # Allows manual triggering of the workflow
+
+permissions:
+  contents: write
 
 jobs:
   generate-blogs:
@@ -38,20 +39,17 @@ jobs:
       # Step 4: Install deps and Run the script to generate blog pages
       - name: Generate Blog Pages
         run: |
-          npm install --save-dev node-fetch
+          npm install --no-save node-fetch
           node generate-blog-pages.js
-      # Step 5: Check for changes
-      - name: Check for Changes
+      # Step 5: Commit and push only if blog pages changed
+      - name: Commit and Push Changes
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
+          git add pages/blog
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
           fi
           git commit -m "bot-add-new-blogs"
-
-      # Step 6: Push changes to the master branch
-      - name: Push Changes
-        run: git push origin master # Should match the branch being used
+          git push origin master
