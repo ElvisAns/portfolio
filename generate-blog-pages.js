@@ -11,18 +11,11 @@ const __dirname = dirname(__filename);
 function fetchMetaData(apiUrl) {
   return new Promise(async (resolve, reject) => {
     try {
-        // dev.to serves list responses from a CDN cache; bust it with a unique URL and no-cache headers
-        const url = `${apiUrl}&_=${Date.now()}`;
-        const response = await fetch(url, {
-          headers: { 'Cache-Control': 'no-cache', 'Pragma': 'no-cache' },
-        });
+        const response = await fetch(apiUrl);
         if (!response.ok) {
           throw new Error(`HTTP Error: ${response.status}`);
         }
         const metaData = await response.json();
-        if (!Array.isArray(metaData)) {
-          throw new Error('Unexpected API response');
-        }
         resolve(metaData);
       } catch (error) {
         reject({error: error.message });
@@ -289,15 +282,14 @@ code:not(code.hljs) {
 
 // Step 3: Main function
 async function main() {
-  const perPage = 10; // Number of articles per page
   let page = 1; // Start from the first page
-  const apiUrlBase = 'https://dev.to/api/articles?username=elvisans&per_page=';
+  const apiUrlBase = 'https://dev.to/api/articles?username=elvisans';
 
   const outputDir = join(__dirname, 'pages/blog');
   let allMetaData = []; // Array to hold all fetched metadata
 
   while (true) {
-    const apiUrl = `${apiUrlBase}${perPage}&page=${page}`;
+    const apiUrl = page === 1 ? apiUrlBase : `${apiUrlBase}&page=${page}`;
     console.log(`Fetching meta data from: ${apiUrl}`);
     const metaData = await fetchMetaData(apiUrl);
 
