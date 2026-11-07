@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: generate-blogs
+  cancel-in-progress: false
+
 jobs:
   generate-blogs:
     runs-on: ubuntu-latest
@@ -52,4 +56,5 @@ jobs:
             exit 0
           fi
           git commit -m "bot-add-new-blogs"
+          git pull --rebase origin master
           git push origin master
